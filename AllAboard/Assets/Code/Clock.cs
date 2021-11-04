@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class Clock : MonoBehaviour
@@ -6,17 +5,28 @@ public class Clock : MonoBehaviour
 	[SerializeField] Transform smallScale;
 	[SerializeField] Transform largeScale;
 
-	private void Start()
+	[SerializeField] float durationOfGameMinutes = 3f;
+
+	private float timeElapsed;
+
+	private void Update()
 	{
-		StartCoroutine(MoveClockScales());
+		MoveClockScales(durationOfGameMinutes, ref timeElapsed);
 	}
-	private IEnumerator MoveClockScales()
+	private void MoveClockScales(float durationCicleMinutes, ref float timeTracker)
 	{
-		while (true)
+		float smallScaleAngle = 360 / (durationCicleMinutes * 60);
+		float largeScaleAngle = smallScaleAngle * 60;
+
+		largeScale.Rotate(Vector3.forward, Mathf.LerpAngle(0, largeScaleAngle, Time.deltaTime));
+
+		timeTracker += Time.deltaTime;
+
+		if (timeTracker >= 1f)
 		{
-			yield return new WaitForSeconds(0.5f);
-			largeScale.Rotate(Vector3.forward, 6f); 
-			smallScale.Rotate(Vector3.forward, 0.5f);
+			smallScale.Rotate(Vector3.forward, smallScaleAngle);
+			timeTracker = 0;
 		}
+
 	}
 }
