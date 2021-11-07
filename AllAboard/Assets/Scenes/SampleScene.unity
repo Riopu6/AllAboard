@@ -418,9 +418,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefe5ed93651c3e40a30a2cc35bc9122, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smallScale: {fileID: 513373814}
-  largeScale: {fileID: 110535924}
-  durationOfGameMinutes: 0.16
+  minuteScale: {fileID: 110535924}
+  hourScale: {fileID: 513373814}
+  durationOfGameMinutes: 1
 --- !u!114 &819891212
 MonoBehaviour:
   m_ObjectHideFlags: 0
