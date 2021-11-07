@@ -2,30 +2,40 @@ using UnityEngine;
 
 public class Clock : MonoBehaviour
 {
-	[SerializeField] Transform smallScale;
-	[SerializeField] Transform largeScale;
+	[SerializeField] Transform minuteScale;
+	[SerializeField] Transform hourScale;
 
 	[SerializeField] float durationOfGameMinutes = 3f;
 
-	private float timeElapsed;
+	private float hourTracker = 0f;
+	private float minuteTracker = 0f;
 
 	private void Update()
 	{
-		MoveClockScales(durationOfGameMinutes, ref timeElapsed);
+		MoveClockScales(durationOfGameMinutes, ref hourTracker, ref minuteTracker);
 	}
-	private void MoveClockScales(float durationCicleMinutes, ref float timeTracker)
+	private void MoveClockScales(float durationCicleMinutes, ref float hourTracker, ref float minuteTracker)
 	{
-		float smallScaleAngle = 360 / (durationCicleMinutes * 60);
-		float largeScaleAngle = smallScaleAngle * 60;
+		float minuteAngle = 360 / 12;
+		float hourAngle = minuteAngle;
 
-		largeScale.Rotate(Vector3.forward, Mathf.LerpAngle(0, largeScaleAngle, Time.deltaTime));
+		float hourCicle = (durationCicleMinutes * 60) / 12f;
+		float minuteCicle = hourCicle / 12f;
 
-		timeTracker += Time.deltaTime;
+		hourTracker += Time.deltaTime;
+		minuteTracker += Time.deltaTime;
 
-		if (timeTracker >= 1f)
+		if(minuteTracker >= minuteCicle)
 		{
-			smallScale.Rotate(Vector3.forward, smallScaleAngle);
-			timeTracker = 0;
+			minuteScale.Rotate(Vector3.forward, minuteAngle);
+			minuteTracker = 0f;
+		}
+
+
+		if (hourTracker >= hourCicle)
+		{
+			hourScale.Rotate(Vector3.forward, hourAngle);
+			hourTracker = 0f;
 		}
 
 	}
