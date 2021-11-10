@@ -6,6 +6,7 @@ public enum TypeOfAnim
 {
     Scale,
     Move,
+    Rotate,
     Alpha
 }
 
@@ -56,6 +57,9 @@ public class GenAnimLT : MonoBehaviour
             case TypeOfAnim.Scale:
                 Scale();
                 break;
+            case TypeOfAnim.Rotate:
+                Rotate();
+                break;
             case TypeOfAnim.Alpha:
                 Fade();
                 break;
@@ -103,6 +107,11 @@ public class GenAnimLT : MonoBehaviour
         _tweenObject = LeanTween.scale(objectToAnimate, to, duration);
     }
 
+    public void Rotate()
+    {
+        _tweenObject = LeanTween.rotate(objectToAnimate.GetComponent<RectTransform>(), to, duration);
+    }
+
     void SwapDirection()
     {
         var temp = from;
@@ -120,5 +129,10 @@ public class GenAnimLT : MonoBehaviour
             SwapDirection();
             gameObject.SetActive(false);
         });
+    }
+
+    public void ResetTween()
+    {
+        _tweenObject.reset();
     }
 }
