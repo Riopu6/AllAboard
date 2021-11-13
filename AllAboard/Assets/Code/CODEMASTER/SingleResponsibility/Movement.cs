@@ -1,24 +1,27 @@
-using UnityEngine;
 using Unity.Extentions;
+using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-	private float moveSpeed = 2f;
+	private const float moveSpeed = 4f;
 	private Rigidbody rig;
+	private Selector selector;
 
 	private void Start()
 	{
+		selector = gameObject.AddComponent<Selector>().GetComponent<Selector>();
 		rig = GetComponent<Rigidbody>();
 	}
 
 	private void FixedUpdate()
 	{
-		Move(Selector.GetRandomPoint(transform.position).ExcludeAxis(SnapAxis.Y));
+		Vector3 target = selector.KeepRandomPointUntilMatch(transform.position).ExcludeAxis(SnapAxis.Y);
+		Move(target);
 	}
 
 	private void Move(Vector3 target)
 	{
-		Vector3 velocity = rig.velocity;
-		rig.AddForce((target - new Vector3(velocity.x, 0, velocity.z)).normalized * moveSpeed, ForceMode.VelocityChange);
+		rig.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * moveSpeed);
+		Debug.DrawLine(transform.position, target, Color.red);
 	}
 }
