@@ -32,7 +32,7 @@ public class Clock : MonoBehaviour
 		}
 
 
-		if (hourTracker >= hourCicle && minuteTracker == 0f)
+		if (hourTracker >= hourCicle)
 		{
 			hourScale.Rotate(Vector3.forward, hourAngle);
 			hourTracker = 0f;
