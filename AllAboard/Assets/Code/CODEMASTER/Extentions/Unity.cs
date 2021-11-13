@@ -11,7 +11,16 @@ namespace Unity
 				return new Vector3(Random.Range(min, max), Random.Range(min, max), Random.Range(min, max));
 			}
 		}
-		public static class Ext
+
+		public static class MathExt
+		{
+			public static bool AproxMatch(this Vector3 vector, Vector3 compare, float marginOfError = 0.1f, SnapAxis excludeAxis = SnapAxis.None)
+			{
+				return Vector3.Distance(vector.ExcludeAxis(excludeAxis), compare.ExcludeAxis(excludeAxis)) <= marginOfError;
+			}
+		}
+
+		public static class Vector3Ext
 		{
 			public static Vector3 ExcludeAxis(this Vector3 vector, SnapAxis excludeAxis)
 			{
@@ -30,7 +39,7 @@ namespace Unity
 				}
 				return vector;
 			}
-			public static Vector3 ReplaceAxis(this Vector3 vector, SnapAxis axis,float value)
+			public static Vector3 ReplaceAxis(this Vector3 vector, SnapAxis axis, float value)
 			{
 				switch (axis)
 				{
@@ -47,6 +56,7 @@ namespace Unity
 				}
 				return vector;
 			}
+			
 		}
 	}
 }
