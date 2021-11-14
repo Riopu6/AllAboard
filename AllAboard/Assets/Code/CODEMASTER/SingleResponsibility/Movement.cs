@@ -15,7 +15,7 @@ public class Movement : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		Vector3 target = selector.KeepRandomPointUntilMatch(transform.position).ExcludeAxis(SnapAxis.Y);
+		Vector3 target = selector.KeepRandomPointOnArea(transform.position, 2f).ExcludeAxis(SnapAxis.Y);
 		Move(target);
 	}
 

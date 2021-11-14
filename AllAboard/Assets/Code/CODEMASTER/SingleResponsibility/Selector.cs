@@ -6,7 +6,7 @@ public class Selector : MonoBehaviour
 	public GameObject MoveArea { get; private set; }
 
 	#region PrivateFunctionVars
-	private Bounds ren;
+	private Bounds bounds;
 	private Vector3 keepRandomPoint = Vector3.zero;
 	private bool changePosition = true; 
 	#endregion
@@ -14,7 +14,7 @@ public class Selector : MonoBehaviour
 	private void Start()
 	{
 		MoveArea = GameObject.FindGameObjectWithTag("MoveArea");
-		ren = MoveArea.GetComponent<Renderer>().bounds;
+		bounds = MoveArea.GetComponent<Renderer>().bounds;
 	}
 
 	public static Vector3 GetRandomPoint(Vector3 currentPosition)
@@ -22,19 +22,19 @@ public class Selector : MonoBehaviour
 		return currentPosition + RandomGetter.GetRandomVector3(-10, 10);
 	}
 
-	public Vector3 KeepRandomPointUntilMatch(Vector3 currentPosition)
+	public Vector3 KeepRandomPointOnArea(Vector3 currentPosition, float marginOfError = 0.1f)
 	{
 		if (changePosition)
 		{
 			var rndPos = GetRandomPoint(currentPosition);
-			if (IsPointValid(ren, rndPos))
+			if (IsPointValid(bounds, rndPos))
 			{
 				keepRandomPoint = rndPos;
 				changePosition = !changePosition;
 			}
 		}
 
-		if (keepRandomPoint.AproxMatch(currentPosition, 2f, SnapAxis.Y))
+		if (keepRandomPoint.AproxMatch(currentPosition, marginOfError))
 		{
 			changePosition = !changePosition;
 		}

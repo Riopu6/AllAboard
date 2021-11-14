@@ -14,9 +14,9 @@ namespace Unity
 
 		public static class MathExt
 		{
-			public static bool AproxMatch(this Vector3 vector, Vector3 compare, float marginOfError = 0.1f, SnapAxis excludeAxis = SnapAxis.None)
+			public static bool AproxMatch(this Vector3 vector, Vector3 compare, float marginOfError = 0.1f)
 			{
-				return Vector3.Distance(vector.ExcludeAxis(excludeAxis), compare.ExcludeAxis(excludeAxis)) <= marginOfError;
+				return Vector3.Distance(vector, compare) <= marginOfError;
 			}
 		}
 
