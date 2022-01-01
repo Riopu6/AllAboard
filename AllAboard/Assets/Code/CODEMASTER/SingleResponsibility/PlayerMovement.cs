@@ -1,21 +1,21 @@
 using Unity.Extentions;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-	private const float moveSpeed = 4f;
+
+	[SerializeField] float moveSpeed = 2f;
 	private Rigidbody rig;
 	private Selector selector;
 
 	private void Start()
 	{
-		selector = gameObject.AddComponent<Selector>().GetComponent<Selector>();
 		rig = GetComponent<Rigidbody>();
 	}
 
 	private void FixedUpdate()
 	{
-		Vector3 target = selector.KeepRandomPointOnArea(transform.position, 2f).ExcludeAxis(SnapAxis.Y);
+		Vector3 target = selector.KeepRandomPointOnArea(transform.position, 5f);
 		Move(target);
 	}
 
@@ -23,5 +23,13 @@ public class Movement : MonoBehaviour
 	{
 		rig.position = Vector3.MoveTowards(transform.position, target, Time.deltaTime * moveSpeed);
 		Debug.DrawLine(transform.position, target, Color.red);
+	}
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		if (collision.collider.CompareTag("MoveArea"))
+		{
+			selector = new Selector(collision.gameObject);
+		}
 	}
 }

@@ -1,22 +1,20 @@
 ﻿using Unity.Extentions;
 using UnityEngine;
 
-public class Selector : MonoBehaviour
+public class Selector
 {
-	public GameObject MoveArea { get; private set; }
-
 	#region PrivateFunctionVars
 	private Bounds bounds;
 	private Vector3 keepRandomPoint = Vector3.zero;
 	private bool changePosition = true; 
 	#endregion
 
-	private void Start()
+	public Selector(GameObject MoveArea)
 	{
-		MoveArea = GameObject.FindGameObjectWithTag("MoveArea");
 		bounds = MoveArea.GetComponent<Renderer>().bounds;
 	}
 
+	#region Functions
 	public static Vector3 GetRandomPoint(Vector3 currentPosition)
 	{
 		return currentPosition + RandomGetter.GetRandomVector3(-10, 10);
@@ -45,5 +43,6 @@ public class Selector : MonoBehaviour
 	private bool IsPointValid(Bounds moveAreaBounds, Vector3 point)
 	{
 		return moveAreaBounds.Contains(point);
-	}
+	} 
+	#endregion
 }
