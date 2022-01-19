@@ -15,16 +15,15 @@ public class Selector
 	}
 
 	#region Functions
-	public static Vector3 GetRandomPoint(Vector3 currentPosition)
-	{
-		return currentPosition + RandomGetter.GetRandomVector3(-10, 10);
-	}
+	public static Vector3 GetRandomPointFrom(Vector3 currentPosition, float min, float max) => currentPosition + RandomGetter.GetRandomVector3(min, max);
+	public static Vector3 GetRandomPointFrom(Vector3 currentPosition, float range) => currentPosition + RandomGetter.GetRandomVector3(-range, range);
 
 	public Vector3 KeepRandomPointOnArea(Vector3 currentPosition, float marginOfError = 0.1f)
 	{
 		if (changePosition)
 		{
-			var rndPos = GetRandomPoint(currentPosition);
+			var rndPos = GetRandomPointFrom(currentPosition, 20).ExcludeAxis(SnapAxis.Y);
+
 			if (IsPointValid(bounds, rndPos))
 			{
 				keepRandomPoint = rndPos;
@@ -40,9 +39,6 @@ public class Selector
 		return keepRandomPoint;
 	}
 
-	private bool IsPointValid(Bounds moveAreaBounds, Vector3 point)
-	{
-		return moveAreaBounds.Contains(point);
-	} 
+	private bool IsPointValid(Bounds moveAreaBounds, Vector3 point) => moveAreaBounds.Contains(point);
 	#endregion
 }
