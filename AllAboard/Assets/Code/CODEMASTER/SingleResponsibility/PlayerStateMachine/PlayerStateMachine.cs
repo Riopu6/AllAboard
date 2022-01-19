@@ -2,19 +2,38 @@ using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
+	public Animator Animator;
+	public Transform Head;
+
+	#region PlayerCollections
+	[SerializeField] private PlayerCollection groundedCollection;
+	[SerializeField] private PlayerCollection dragCollection;
+	#endregion
+
 	private IPlayerState currentState;
+
+	public GroundState groundState;
+	public DragState dragState;
 
 	private void Start()
 	{
-		currentState = new GroundState(this);
+		groundState = new GroundState(this, groundedCollection);
+		dragState = new DragState(this, dragCollection);
+
+		SetState(groundState);
 	}
 
 	private void FixedUpdate() => currentState?.RunState();
-
-	public void SetState(IPlayerState state) => currentState = state;
-
-	private void OnCollisionEnter(Collision collision)
+	public void SetState(IPlayerState state)
 	{
-		currentState.OnCollisionEnter(collision);
+		currentState = state;
+		currentState.EnterState();
 	}
+
+	public void PlayAnimation(string animation)
+	{
+		Animator.Play(animation);
+	}
+
+	private void OnCollisionEnter(Collision collision) => currentState.OnCollisionEnter(collision);
 }

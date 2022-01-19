@@ -2,12 +2,13 @@
 
 public class UserInteraction : MonoBehaviour
 {
-	private Camera mainCamera;
-	[SerializeField] LayerMask ignoreRaycast;
 
 	public static Vector3 ScreenTouchPosition { get; private set; }
-	public static Collider Collider { get; private set; }
+	public static Collider SelectedCollider { get; private set; }
 
+	[SerializeField] LayerMask ignoreRaycast;
+	
+	private Camera mainCamera;
 	private void Start()
 	{
 		mainCamera = Camera.main;
@@ -15,22 +16,25 @@ public class UserInteraction : MonoBehaviour
 
 	private void Update()
 	{
+		print(SelectedCollider);
 		if (Input.GetMouseButton(0))
 		{
 			Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+			Ray ray2 = ray;
 			if (Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity, ~ignoreRaycast))
 			{
 				ScreenTouchPosition = hitInfo.point;
 				Debug.DrawLine(mainCamera.transform.position, ScreenTouchPosition, Color.yellow);
 			}
-			if (Physics.Raycast(ray, out hitInfo))
+			if (Physics.Raycast(ray2, out RaycastHit hitInfo2))
 			{
-				Collider = hitInfo.collider;
+				SelectedCollider = hitInfo2.collider;
+				Debug.DrawLine(mainCamera.transform.position, SelectedCollider.transform.position, Color.red);
 			}
 		}
 		else
 		{
-			Collider = null;
+			SelectedCollider = null;
 		}
 	}
 }

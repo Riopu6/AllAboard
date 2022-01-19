@@ -1,25 +1,40 @@
+using Unity.Extentions;
 using UnityEngine;
 
 public class GroundState : IPlayerState
 {
 	private readonly PlayerStateMachine Context;
 	private Rigidbody rig;
+	private PlayerCollection collection;
 
 	private Selector selector;
 
-	public GroundState(PlayerStateMachine context) => Context = context;
+	public GroundState(PlayerStateMachine context, PlayerCollection collection)
+	{
+		Context = context;
+		this.collection = collection;
+	}
+
+	public void EnterState()
+	{
+		rig = Context.GetComponent<Rigidbody>();
+		Context.PlayAnimation(collection.animationName);
+	}
 
 	public void RunState()
 	{
-		rig = Context.GetComponent<Rigidbody>();
 		if(selector != null)
 		{
-			Move(selector.KeepRandomPointOnArea(Context.transform.position, 5f));
-			Debug.DrawLine(Context.transform.position, selector.KeepRandomPointOnArea(Context.transform.position, 5f), Color.red);
+			const float MarginOfError = 5f;
+			Vector3 target = selector.KeepRandomPointOnArea(Context.transform.position.ExcludeAxis(SnapAxis.Y), MarginOfError);
+			Move(target);
+			Rotate(target);
+			Debug.DrawLine(Context.transform.position.ExcludeAxis(SnapAxis.Y), target, Color.red);
 		}
-		if (UserInteraction.Collider == Context.gameObject.GetComponent<Collider>())
+		if (UserInteraction.SelectedCollider != null)
 		{
-			Context.SetState(new DragState(Context));
+			Debug.Log(UserInteraction.SelectedCollider);
+			Context.SetState(Context.dragState);
 		}
 	}
 	public void OnCollisionEnter(Collision collision)
@@ -32,8 +47,15 @@ public class GroundState : IPlayerState
 
 	private void Move(Vector3 target)
 	{
-		float moveSpeed = 2f;
+		float moveSpeed = 5f;
 		rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * moveSpeed);
+	}
+
+	private void Rotate(Vector3 target)
+	{
+		float rotSpeed = 3f;
+		Vector3 targetDirection = Vector3Ext.GetDirection(Context.transform.position, target).ExcludeAxis(SnapAxis.Y);
+		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * rotSpeed);
 	}
 
 }

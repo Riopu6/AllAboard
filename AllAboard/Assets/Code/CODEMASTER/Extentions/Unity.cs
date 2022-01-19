@@ -6,7 +6,7 @@ namespace Unity
 	{
 		public class RandomGetter
 		{
-			public static Vector3 GetRandomVector3(float min = 0, float max = 100)
+			public static Vector3 GetRandomVector3(float min = float.MinValue, float max = float.MaxValue)
 			{
 				return new Vector3(Random.Range(min, max), Random.Range(min, max), Random.Range(min, max));
 			}
