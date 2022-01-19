@@ -5,8 +5,6 @@ public class DragState : IPlayerState
 {
 	private readonly PlayerStateMachine Context;
 	private Vector3 CameraPosition;
-	private Transform trans;
-
 	private PlayerCollection collection;
 	public DragState(PlayerStateMachine context, PlayerCollection collection)
 	{
@@ -15,12 +13,9 @@ public class DragState : IPlayerState
 		this.collection = collection;
 	}
 
-	public void OnCollisionEnter(Collision collision){}
+	public void OnCollisionEnter(Collision collision) {}
 
-	public void EnterState()
-	{
-		trans = Context.Head;
-	}
+	public void EnterState() {}
 
 	public void RunState()
 	{
@@ -28,7 +23,7 @@ public class DragState : IPlayerState
 		{
 			Vector3 touchPos = UserInteraction.ScreenTouchPosition;
 			Vector3 direction = Vector3Ext.GetDirection(touchPos, CameraPosition);
-			Vector3 perspective = touchPos + direction * 10;
+			Vector3 perspective = touchPos + direction * 25;
 
 			Context.transform.position = perspective;
 		}

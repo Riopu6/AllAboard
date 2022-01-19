@@ -1,9 +1,9 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
 public class PlayerStateMachine : MonoBehaviour
 {
 	public Animator Animator;
-	public Transform Head;
 
 	#region PlayerCollections
 	[SerializeField] private PlayerCollection groundedCollection;

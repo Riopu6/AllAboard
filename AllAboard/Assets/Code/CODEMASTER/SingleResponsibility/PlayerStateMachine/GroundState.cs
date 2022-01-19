@@ -29,9 +29,9 @@ public class GroundState : IPlayerState
 			Vector3 target = selector.KeepRandomPointOnArea(Context.transform.position.ExcludeAxis(SnapAxis.Y), MarginOfError);
 			Move(target);
 			Rotate(target);
-			Debug.DrawLine(Context.transform.position.ExcludeAxis(SnapAxis.Y), target, Color.red);
+			Debug.DrawLine(Context.transform.position, target, Color.red);
 		}
-		if (UserInteraction.SelectedCollider != null)
+		if (UserInteraction.SelectedCollider == Context.GetComponent<Collider>())
 		{
 			Debug.Log(UserInteraction.SelectedCollider);
 			Context.SetState(Context.dragState);
