@@ -6,19 +6,22 @@ public class PlayerStateMachine : MonoBehaviour
 	public Animator Animator;
 
 	#region PlayerCollections
-	[SerializeField] private PlayerCollection groundedCollection;
-	[SerializeField] private PlayerCollection dragCollection;
+	[SerializeField] PlayerCollection groundedCollection;
+	[SerializeField] PlayerCollection dragCollection;
+	[SerializeField] PlayerCollection fallingCollection;
 	#endregion
 
 	private IPlayerState currentState;
 
 	public GroundState groundState;
 	public DragState dragState;
+	public FallingState fallingState;
 
 	private void Start()
 	{
 		groundState = new GroundState(this, groundedCollection);
 		dragState = new DragState(this, dragCollection);
+		fallingState = new FallingState(this, fallingCollection);
 
 		SetState(groundState);
 	}
