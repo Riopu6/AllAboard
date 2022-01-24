@@ -209,9 +209,9 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 6.136, y: 0, z: 0}
+        value: {x: 6.136, y: 0, z: -22}
         inSlope: {x: Infinity, y: Infinity, z: Infinity}
-        outSlope: {x: 0.5460005, y: 0, z: -131.148}
+        outSlope: {x: 0.5460005, y: 0, z: 0.8520012}
         tangentMode: 0
         weightedMode: 3
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -219,7 +219,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.16666667
         value: {x: 6.227, y: 0, z: -21.858}
-        inSlope: {x: 0.5460005, y: -0, z: -131.148}
+        inSlope: {x: 0.5460005, y: -0, z: 0.8520012}
         outSlope: {x: 0, y: 0, z: 131.148}
         tangentMode: 0
         weightedMode: 3
@@ -959,9 +959,9 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -22
         inSlope: Infinity
-        outSlope: -131.148
+        outSlope: 0.8520012
         tangentMode: 69
         weightedMode: 3
         inWeight: 0.33333334
@@ -969,7 +969,7 @@ AnimationClip:
       - serializedVersion: 3
         time: 0.16666667
         value: -21.858
-        inSlope: -131.148
+        inSlope: 0.8520012
         outSlope: 131.148
         tangentMode: 69
         weightedMode: 3
@@ -1285,7 +1285,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Root/HeadBone/HeadSpine/LeftCallarBone/LeftHand/LeftElbow
+    path: Root/HeadBone/HeadSpine/RightCallarBone/RightHand/RightElbow
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1295,17 +1295,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Root/HeadBone/HeadSpine/LeftCallarBone/LeftHand/LeftElbow
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: Root/HeadBone/HeadSpine/LeftCallarBone/LeftHand/LeftElbow
+    path: Root/HeadBone/HeadSpine/RightCallarBone/RightHand/RightElbow
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1324,8 +1314,18 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: Root/HeadBone/HeadSpine/LeftCallarBone/LeftHand/LeftElbow
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Root/HeadBone/HeadSpine/RightCallarBone/RightHand/RightElbow
+    path: Root/HeadBone/HeadSpine/LeftCallarBone/LeftHand/LeftElbow
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1335,7 +1335,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Root/HeadBone/HeadSpine/RightCallarBone/RightHand/RightElbow
+    path: Root/HeadBone/HeadSpine/LeftCallarBone/LeftHand/LeftElbow
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

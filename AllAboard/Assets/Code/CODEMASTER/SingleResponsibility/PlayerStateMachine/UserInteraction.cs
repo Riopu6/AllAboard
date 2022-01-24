@@ -33,8 +33,8 @@ public class UserInteraction : MonoBehaviour
 				{
 					SelectedCollider = hitInfo.collider;
 					isSelectedCollider = true;
+					Debug.DrawLine(mainCamera.transform.position, SelectedCollider.transform.position, Color.red);
 				}
-				Debug.DrawLine(mainCamera.transform.position, SelectedCollider.transform.position, Color.red);
 			}
 		}
 		if (Input.GetMouseButtonUp(0))
