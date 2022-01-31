@@ -12,6 +12,7 @@ namespace Unity
 			}
 		}
 
+
 		public static class MathExt
 		{
 			public static bool AproxMatch(this Vector3 vector, Vector3 compare, float marginOfError = 0.1f)
@@ -117,7 +118,10 @@ namespace Unity
 
 		public static class ConvertExt
 		{
-			public static Vector2 ToVector2(this Vector3 vector) => vector;
+			public static Vector2 ToVector2(this Vector3 vector)
+			{
+				return vector;
+			}
 		}
 
 		public static class DebugExt
