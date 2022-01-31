@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider))]
+[RequireComponent(typeof(Rigidbody), typeof(CapsuleCollider), typeof(Animator))]
 public class PlayerStateMachine : MonoBehaviour
 {
 	public Animator Animator;
