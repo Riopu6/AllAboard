@@ -25,7 +25,7 @@ public class Clock : MonoBehaviour
 		hourTracker += Time.deltaTime;
 		minuteTracker += Time.deltaTime;
 
-		if(minuteTracker >= minuteCicle)
+		if (minuteTracker >= minuteCicle)
 		{
 			minuteScale.Rotate(Vector3.forward, minuteAngle);
 			minuteTracker = 0f;

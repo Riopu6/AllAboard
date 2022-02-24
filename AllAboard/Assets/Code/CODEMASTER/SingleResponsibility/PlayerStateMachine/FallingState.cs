@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FallingState : IPlayerState
@@ -10,16 +8,16 @@ public class FallingState : IPlayerState
 	public FallingState(PlayerStateMachine context, PlayerCollection fallingCollection)
 	{
 		Context = context;
-		this.collection = fallingCollection;
+		collection = fallingCollection;
 	}
 
-	public void EnterState() 
+	public void EnterState()
 	{
-		Context.PlayAnimation(collection.animationName);	
+		Context.PlayAnimation(collection.animationName);
 	}
 	public void RunState()
 	{
-		
+
 	}
 
 	public void OnCollisionEnter(Collision collision) { Context.SetState(Context.groundState); Context.groundState.OnCollisionEnter(collision); }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /**
 * Internal Representation of a Sequence<br>
@@ -19,7 +17,8 @@ using UnityEngine;
 * @class LTSeq
 * @constructor
 */
-public class LTSeq {
+public class LTSeq
+{
 
 	public LTSeq previous;
 
@@ -39,8 +38,10 @@ public class LTSeq {
 
 	private uint _id;
 
-	public int id{
-		get{ 
+	public int id
+	{
+		get
+		{
 			uint toId = _id | counter << 16;
 
 			/*uint backId = toId & 0xFFFF;
@@ -53,13 +54,15 @@ public class LTSeq {
 		}
 	}
 
-	public void reset(){
+	public void reset()
+	{
 		previous = null;
 		tween = null;
 		totalDelay = 0f;
 	}
 
-	public void init(uint id, uint global_counter){
+	public void init(uint id, uint global_counter)
+	{
 		reset();
 		_id = id;
 
@@ -68,7 +71,8 @@ public class LTSeq {
 		this.current = this;
 	}
 
-	private LTSeq addOn(){
+	private LTSeq addOn()
+	{
 		this.current.toggle = true;
 		LTSeq lastCurrent = this.current;
 		this.current = LeanTween.sequence(true);
@@ -80,15 +84,17 @@ public class LTSeq {
 		return current;
 	}
 
-	private float addPreviousDelays(){
-//		Debug.Log("delay:"+delay+" count:"+this.current.count+" this.current.totalDelay:"+this.current.totalDelay);
+	private float addPreviousDelays()
+	{
+		//		Debug.Log("delay:"+delay+" count:"+this.current.count+" this.current.totalDelay:"+this.current.totalDelay);
 
 		LTSeq prev = this.current.previous;
 
-		if (prev != null && prev.tween!=null) {
-            return this.current.totalDelay + prev.tween.time;
+		if (prev != null && prev.tween != null)
+		{
+			return this.current.totalDelay + prev.tween.time;
 		}
-        return this.current.totalDelay;
+		return this.current.totalDelay;
 	}
 
 	/**
@@ -100,8 +106,9 @@ public class LTSeq {
 	* seq.append(1f); // delay everything one second<br>
 	* seq.append( LeanTween.move(cube1, Vector3.one * 10f, 1f) ); // do a tween<br>
 	*/
-	public LTSeq append( float delay ){
-        this.current.totalDelay += delay;
+	public LTSeq append(float delay)
+	{
+		this.current.totalDelay += delay;
 
 		return this.current;
 	}
@@ -121,9 +128,10 @@ public class LTSeq {
 	* &nbsp;Debug.Log("We are done now");<br>
 	* });;<br>
 	*/
-	public LTSeq append( System.Action callback ){
+	public LTSeq append(System.Action callback)
+	{
 		LTDescr newTween = LeanTween.delayedCall(0f, callback);
-//		Debug.Log("newTween:" + newTween);
+		//		Debug.Log("newTween:" + newTween);
 		return append(newTween);
 	}
 
@@ -143,19 +151,22 @@ public class LTSeq {
 	* &nbsp;Debug.Log("We are done now obj value:"+dict["hi"]);
 	* &nbsp;}, new Dictionary<string,string>(){ {"hi","sup"} } );
 	*/
-	public LTSeq append( System.Action<object> callback, object obj ){
+	public LTSeq append(System.Action<object> callback, object obj)
+	{
 		append(LeanTween.delayedCall(0f, callback).setOnCompleteParam(obj));
 
 		return addOn();
 	}
 
-	public LTSeq append( GameObject gameObject, System.Action callback ){
+	public LTSeq append(GameObject gameObject, System.Action callback)
+	{
 		append(LeanTween.delayedCall(gameObject, 0f, callback));
 
 		return addOn();
 	}
 
-	public LTSeq append( GameObject gameObject, System.Action<object> callback, object obj ){
+	public LTSeq append(GameObject gameObject, System.Action<object> callback, object obj)
+	{
 		append(LeanTween.delayedCall(gameObject, 0f, callback).setOnCompleteParam(obj));
 
 		return addOn();
@@ -171,53 +182,65 @@ public class LTSeq {
 	* seq.append( LeanTween.move(cube1, Vector3.one * 10f, 1f) ); // do a move tween<br>
 	* seq.append( LeanTween.rotateAround( avatar1, Vector3.forward, 360f, 1f ) ); // then do a rotate tween<br>
 	*/
-	public LTSeq append( LTDescr tween ){
+	public LTSeq append(LTDescr tween)
+	{
 		this.current.tween = tween;
 
-//		Debug.Log("tween:" + tween + " delay:" + this.current.totalDelay);
+		//		Debug.Log("tween:" + tween + " delay:" + this.current.totalDelay);
 
-        this.current.totalDelay = addPreviousDelays();
+		this.current.totalDelay = addPreviousDelays();
 
-		tween.setDelay( this.current.totalDelay );
+		tween.setDelay(this.current.totalDelay);
 
 		return addOn();
 	}
 
-	public LTSeq insert( LTDescr tween ){
+	public LTSeq insert(LTDescr tween)
+	{
 		this.current.tween = tween;
 
-        tween.setDelay( addPreviousDelays() );
+		tween.setDelay(addPreviousDelays());
 
 		return addOn();
 	}
 
 
-	public LTSeq setScale( float timeScale ){
-//		Debug.Log("this.current:" + this.current.previous.debugIter+" tween:"+this.current.previous.tween);
+	public LTSeq setScale(float timeScale)
+	{
+		//		Debug.Log("this.current:" + this.current.previous.debugIter+" tween:"+this.current.previous.tween);
 		setScaleRecursive(this.current, timeScale, 500);
 
 		return addOn();
 	}
 
-	private void setScaleRecursive( LTSeq seq, float timeScale, int count ){
-		if (count > 0) {
+	private void setScaleRecursive(LTSeq seq, float timeScale, int count)
+	{
+		if (count > 0)
+		{
 			this.timeScale = timeScale;
 
-//			Debug.Log("seq.count:" + count + " seq.tween:" + seq.tween);
+			//			Debug.Log("seq.count:" + count + " seq.tween:" + seq.tween);
 			seq.totalDelay *= timeScale;
-			if (seq.tween != null) {
-//			Debug.Log("seq.tween.time * timeScale:" + seq.tween.time * timeScale + " seq.totalDelay:"+seq.totalDelay +" time:"+seq.tween.time+" seq.tween.delay:"+seq.tween.delay);
+			if (seq.tween != null)
+			{
+				//			Debug.Log("seq.tween.time * timeScale:" + seq.tween.time * timeScale + " seq.totalDelay:"+seq.totalDelay +" time:"+seq.tween.time+" seq.tween.delay:"+seq.tween.delay);
 				if (seq.tween.time != 0f)
+				{
 					seq.tween.setTime(seq.tween.time * timeScale);
+				}
+
 				seq.tween.setDelay(seq.tween.delay * timeScale);
 			}
 
 			if (seq.previous != null)
+			{
 				setScaleRecursive(seq.previous, timeScale, count - 1);
+			}
 		}
 	}
 
-	public LTSeq reverse(){
+	public LTSeq reverse()
+	{
 
 		return addOn();
 	}

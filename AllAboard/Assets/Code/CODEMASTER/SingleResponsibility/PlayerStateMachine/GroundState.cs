@@ -1,4 +1,3 @@
-using Unity;
 using Unity.Extentions;
 using UnityEngine;
 
@@ -24,14 +23,16 @@ public class GroundState : IPlayerState
 
 	public void RunState()
 	{
-		if(selector != null)
+		if (selector != null)
 		{
 			const float MarginOfError = 5f;
-			Vector3 target = selector.KeepRandomPointOnArea(Context.transform.position.ExcludeAxis(SnapAxis.Y), MarginOfError);
+			Vector3 currentPosition = Context.transform.position.ReplaceY(selector.Target.y);
+			Vector3 target = selector.KeepRandomPointOnArea(currentPosition, MarginOfError);
 			Move(target);
 			Rotate(target);
-			Debug.DrawLine(Context.transform.position, target, Color.red);
+			Debug.DrawLine(currentPosition, selector.Target, Color.red);
 		}
+
 		if (UserInteraction.SelectedCollider == Context.GetComponent<Collider>())
 		{
 			Debug.Log(UserInteraction.SelectedCollider);

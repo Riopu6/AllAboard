@@ -6,5 +6,5 @@ public struct PlayerCollection
 {
 	public AudioClip audioClip;
 	[SerializeField] private AnimationClip animation;
-	public string animationName { get { return animation.name; } }
+	public string animationName => animation.name;
 }

@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PathBezier2d : MonoBehaviour {
+public class PathBezier2d : MonoBehaviour
+{
 
 	public Transform[] cubes;
 
@@ -11,9 +10,10 @@ public class PathBezier2d : MonoBehaviour {
 
 	private LTBezierPath visualizePath;
 
-	void Start () {
+	void Start()
+	{
 		// move 
-		Vector3[] path = new Vector3[]{cubes[0].position,cubes[1].position,cubes[2].position,cubes[3].position};
+		Vector3[] path = new Vector3[] { cubes[0].position, cubes[1].position, cubes[2].position, cubes[3].position };
 		// 90 degree test
 		// path = new Vector3[] {new Vector3(7.5f, 0f, 0f), new Vector3(0f, 0f, 2.5f), new Vector3(2.5f, 0f, 0f), new Vector3(0f, 0f, 7.5f)};
 		visualizePath = new LTBezierPath(path);
@@ -23,10 +23,13 @@ public class PathBezier2d : MonoBehaviour {
 		LeanTween.moveLocal(dude2, path, 10f).setOrientToPath2d(true);
 	}
 
-	void OnDrawGizmos(){
+	void OnDrawGizmos()
+	{
 		// Debug.Log("drwaing");
 		Gizmos.color = Color.red;
-		if(visualizePath!=null)
+		if (visualizePath != null)
+		{
 			visualizePath.gizmoDraw(); // To Visualize the path, use this method
+		}
 	}
 }

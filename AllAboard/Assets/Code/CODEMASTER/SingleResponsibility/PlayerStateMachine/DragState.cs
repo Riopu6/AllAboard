@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using Unity.Extentions;
-using Unity;
+﻿using Unity.Extentions;
+using UnityEngine;
 
 public class DragState : IPlayerState
 {
@@ -15,9 +14,9 @@ public class DragState : IPlayerState
 		this.collection = collection;
 	}
 
-	public void OnCollisionEnter(Collision collision) {}
+	public void OnCollisionEnter(Collision collision) { }
 
-	public void EnterState() 
+	public void EnterState()
 	{
 		rig = Context.GetComponent<Rigidbody>();
 		SwitchGravity();
@@ -29,7 +28,7 @@ public class DragState : IPlayerState
 	{
 		if (Input.GetMouseButton(0))
 		{
-			DragPassenger();			
+			DragPassenger();
 		}
 
 		else
@@ -48,5 +47,8 @@ public class DragState : IPlayerState
 		Context.transform.position = perspective;
 	}
 
-	private void SwitchGravity() => rig.useGravity = !rig.useGravity;
+	private void SwitchGravity()
+	{
+		rig.useGravity = !rig.useGravity;
+	}
 }
