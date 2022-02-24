@@ -26,7 +26,11 @@ public class PlayerStateMachine : MonoBehaviour
 		SetState(groundState);
 	}
 
-	private void FixedUpdate() => currentState?.RunState();
+	private void FixedUpdate()
+	{
+		currentState?.RunState();
+	}
+
 	public void SetState(IPlayerState state)
 	{
 		currentState = state;
@@ -38,5 +42,8 @@ public class PlayerStateMachine : MonoBehaviour
 		Animator.Play(animation);
 	}
 
-	private void OnCollisionEnter(Collision collision) => currentState.OnCollisionEnter(collision);
+	private void OnCollisionEnter(Collision collision)
+	{
+		currentState.OnCollisionEnter(collision);
+	}
 }
