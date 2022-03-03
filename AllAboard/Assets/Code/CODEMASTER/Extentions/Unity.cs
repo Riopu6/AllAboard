@@ -1,14 +1,23 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Unity
 {
 	namespace Extentions
 	{
-		public class RandomGetter
+		public static class RandomGetter
 		{
 			public static Vector3 GetRandomVector3(float min = float.MinValue, float max = float.MaxValue)
 			{
 				return new Vector3(Random.Range(min, max), Random.Range(min, max), Random.Range(min, max));
+			}
+			public static T GetRandomElement<T>(this IEnumerable<T> list)
+			{
+				if (list.Count() == 0)
+					return default;
+
+				return list.ElementAt(Random.Range(0, list.Count()));
 			}
 		}
 
