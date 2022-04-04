@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfTypeDate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <TypeDate>
+    <guid>842f43ac94b4b4f72ac0898650ddcc44</guid>
+    <fileName>Assets/Cleaner/Editor/AssetCollector.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetClean.AssetCollector</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>805140a4856714e288ea84985d3023df</guid>
+    <fileName>Assets/Cleaner/Editor/AssetReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetReferenceCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>202c278a17939b24c8b79c0ee1f94d8f</guid>
+    <fileName>Assets/Cleaner/Editor/ClassReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetClean.ClassReferenceCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>0d05386265df34bac8d0b6df44aa494c</guid>
+    <fileName>Assets/Cleaner/Editor/CollectionData.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>CollectionData</string>
+      <string>TypeDate</string>
+      <string>IReferenceCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>74eec3bfba0594259ac2843353c082a3</guid>
+    <fileName>Assets/Cleaner/Editor/FindUnusedAssetsWindow.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetClean.FindUnusedAssetsWindow</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>2c4f01a79a77a45a9a84004cc2b78098</guid>
+    <fileName>Assets/Cleaner/Editor/ShaderReferenceCollection.cs</fileName>
+    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <typeFullName>
+      <string>AssetClean.ShaderReferenceCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>880486f53d78fea49a8a60270b1b931e</guid>
+    <fileName>Assets/Code/CODEMASTER/Extentions/Unity.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.1489784+01:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>4589b6d2f7bd2ff4aaeb8d5746d886d0</guid>
+    <fileName>Assets/Code/CODEMASTER/Interfaces/IPlayerState.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.1569773+01:00</timeStamp>
+    <typeFullName>
+      <string>IPlayerState</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ca852abbc3b671546a7950d85b9bf671</guid>
+    <fileName>Assets/Code/CODEMASTER/Interfaces/IState.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.1639795+01:00</timeStamp>
+    <typeFullName>
+      <string>IState</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>eefe5ed93651c3e40a30a2cc35bc9122</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/Clock.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.1709771+01:00</timeStamp>
+    <typeFullName>
+      <string>Clock</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>db6c4de892362d044b69c7821155046b</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/Selector.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.2641849+01:00</timeStamp>
+    <typeFullName>
+      <string>Selector</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>67d05a984c1ae33478d116b8b9337c3a</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/UserInteraction.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.302518+01:00</timeStamp>
+    <typeFullName>
+      <string>UserInteraction</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>86cce0c33a241c840ac0431c75e5afad</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/Customises/ColorPaletteCollection.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.1779954+01:00</timeStamp>
+    <typeFullName>
+      <string>ColorPaletteCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8d3b72f293c64df40bd41bb222b72347</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/Customises/Customizer.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.1779954+01:00</timeStamp>
+    <typeFullName>
+      <string>Customizer</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b7d8a3d9d14a3c244b1733653162b651</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/Customises/LinkedCustomizer.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.1789967+01:00</timeStamp>
+    <typeFullName>
+      <string>LinkedCustomizer</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f57e0b5970f3f0f449a38fadab9eea0e</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/Customises/RegularPassengerCustomizer.cs</fileName>
+    <timeStamp>2022-04-03T21:31:21.7136059+02:00</timeStamp>
+    <typeFullName>
+      <string>RegularPassengerCustomizer</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>05433dee44363864bb0312e1989f41e7</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/Customises/SimpleTrainCustomizer.cs</fileName>
+    <timeStamp>2022-04-03T21:31:57.3331169+02:00</timeStamp>
+    <typeFullName>
+      <string>SimpleTrainCustomizer</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>12a2ab1edcd74eb47bee12dbeb67cedd</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/Customises/SpecialPassengerCustomizer.cs</fileName>
+    <timeStamp>2022-04-03T21:31:42.4466346+02:00</timeStamp>
+    <typeFullName>
+      <string>SpecialPassengerCustomizer</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>df66885197a06e347a555a6d5dfb41ff</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/PlayerStateMachine/DragState.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.1889945+01:00</timeStamp>
+    <typeFullName>
+      <string>DragState</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b943ec250145e2243b5b1e0f62be5b69</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/PlayerStateMachine/FallingState.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.206534+01:00</timeStamp>
+    <typeFullName>
+      <string>FallingState</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>945839c1b5b490248bc6f8ef951a56bc</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/PlayerStateMachine/GroundState.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.2321512+01:00</timeStamp>
+    <typeFullName>
+      <string>GroundState</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a587675e0836fd9469904ed231302135</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/PlayerStateMachine/PlayerCollection.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.2421523+01:00</timeStamp>
+    <typeFullName>
+      <string>PlayerCollection</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ba279a45a6e8e1943b943b376454eb19</guid>
+    <fileName>Assets/Code/CODEMASTER/SingleResponsibility/PlayerStateMachine/PlayerStateMachine.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.259185+01:00</timeStamp>
+    <typeFullName>
+      <string>PlayerStateMachine</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>61f08c034ed25cd42b88b2d871dc20ca</guid>
+    <fileName>Assets/Code/Helper/CreatePassenger.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.3165181+01:00</timeStamp>
+    <typeFullName>
+      <string>CreatePassenger</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>0df510b012fa8a4499f51235647fd222</guid>
+    <fileName>Assets/Code/LeanTweenAnimations/BubbleAnim.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.3255189+01:00</timeStamp>
+    <typeFullName>
+      <string>BubbleAnim</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>917286c1bfd05824fa9ed4a107818e90</guid>
+    <fileName>Assets/Code/LeanTweenAnimations/ChangeSceneScript.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.3315214+01:00</timeStamp>
+    <typeFullName>
+      <string>ChangeSceneScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>4af893a0e2f079940a60dfc066eacefd</guid>
+    <fileName>Assets/Code/LeanTweenAnimations/FPSCounter.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.3345195+01:00</timeStamp>
+    <typeFullName>
+      <string>FPSCounter</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>e1b05aaa10ba3d240a585633c902c190</guid>
+    <fileName>Assets/Code/LeanTweenAnimations/GenAnimLT.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.3659444+01:00</timeStamp>
+    <typeFullName>
+      <string>TypeOfAnim</string>
+      <string>GenAnimLT</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>407ccd05ba1b290459153b4cbe7f820b</guid>
+    <fileName>Assets/Code/LeanTweenAnimations/LevelSO.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.3709435+01:00</timeStamp>
+    <typeFullName>
+      <string>LevelSO</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>94907ccc7047a704585634cc1e9ee8a1</guid>
+    <fileName>Assets/Code/LeanTweenAnimations/OpenLevelPanel.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.3819445+01:00</timeStamp>
+    <typeFullName>
+      <string>OpenLevelPanel</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>66650c6faf17b724f835bdf13369e751</guid>
+    <fileName>Assets/Code/LeanTweenAnimations/PausePanelInfo.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.3989446+01:00</timeStamp>
+    <typeFullName>
+      <string>PausePanelInfo</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7add5e7c83683a74aa1739383d17a9e7</guid>
+    <fileName>Assets/Code/LeanTweenAnimations/SomeScript.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.4059459+01:00</timeStamp>
+    <typeFullName>
+      <string>SomeScript</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8e87b5b84fadb53448f1907eb9fba1b8</guid>
+    <fileName>Assets/Code/Testing/Passenger.cs</fileName>
+    <timeStamp>2022-03-06T12:59:29.659926+01:00</timeStamp>
+    <typeFullName>
+      <string>Passenger</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>f46ca998f190ba849821cd0c1199129d</guid>
+    <fileName>Assets/Code/Testing/UnityEventTest.cs</fileName>
+    <timeStamp>2022-03-06T12:59:29.6609247+01:00</timeStamp>
+    <typeFullName>
+      <string>UnityEventTest`1</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>52fea17a2d56d46afa0d6cb52e2a4335</guid>
+    <fileName>Assets/LeanTween/Editor/LeanTweenDocumentationEditor.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.4409442+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanTweenDocumentationEditor</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp-Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>876bfcaf53a664f29a628faa9fa332fc</guid>
+    <fileName>Assets/LeanTween/Examples/Archived/OldGUIExamplesCS.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.4449442+01:00</timeStamp>
+    <typeFullName>
+      <string>OldGUIExamplesCS</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>b8abaf57a262a44a994d8e7bcbc035e0</guid>
+    <fileName>Assets/LeanTween/Examples/Archived/TestingPunch.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.4499441+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingPunch</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1172f23ac87274d9f941c26abca49be5</guid>
+    <fileName>Assets/LeanTween/Examples/Archived/TestingRigidbodyCS.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.453945+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingRigidbodyCS</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7e619db3c84234f098b8636588c25e4f</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/Following.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.5229446+01:00</timeStamp>
+    <typeFullName>
+      <string>Following</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a4fce1b486cc240c4825b3bfd794e9e0</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralAdvancedTechniques.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.5259439+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralAdvancedTechniques</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a2605544ab2e14c93a780ca20c108cfe</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralBasic.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.5289437+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralBasic</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9b39dd70d168b4cbea9a7b8561d9accc</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralBasics2d.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.5319434+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralBasics2d</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8a650682fa3d54a57a2521dbf9f6eac2</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralCameraShake.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.547944+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralCameraShake</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>94e9a883a33cd40b9be1a63f002c4db2</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralEasingTypes.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.5519433+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralEasingTypes</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>cd679d4fbbd8d475ba7187561370c3aa</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralEventsListeners.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.554943+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralEventsListeners</string>
+      <string>GeneralEventsListeners+MyEvents</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5b54bce4a9ed14e28a4a423c794a2d70</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralSequencer.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.5679438+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralSequencer</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>19c352f230e8b46f08abbbd7cc11edb8</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralSimpleUI.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.6246138+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralSimpleUI</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>cc2ddccee016148b189d987f564ee08e</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/GeneralUISpace.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.6276125+01:00</timeStamp>
+    <typeFullName>
+      <string>GeneralUISpace</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>674f3c10d8880408e875a9e6c3ee83bb</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/LogoCinematic.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.6306133+01:00</timeStamp>
+    <typeFullName>
+      <string>LogoCinematic</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ac2038ba3961049ed889ae71039982cd</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/PathBezier.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.6399563+01:00</timeStamp>
+    <typeFullName>
+      <string>DentedPixel.LTExamples.PathBezier</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>873cb511c724a48bd919ce8a18fa882c</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/PathBezier2d.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.641956+01:00</timeStamp>
+    <typeFullName>
+      <string>PathBezier2d</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ef4235237d8d8413c9d5807cf0a1f77b</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/PathSpline.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.644956+01:00</timeStamp>
+    <typeFullName>
+      <string>ExampleSpline</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>15c036b11e3ff486ea685da06fa305f6</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/PathSpline2d.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.6469559+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSpline2d</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>784f0e347ee4d4c3b83ca56d6f33f01a</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/PathSplineEndless.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.6689932+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSplineEndless</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5de62495c8a5d49e6b3ca111f8c7e944</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/PathSplinePerformance.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.6870257+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSplinePerformance</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>de0396ae3eef541c190f0e6962090454</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/PathSplines.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.7013598+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSplines</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>31af73f8be2864eda9a3fbb6d0d2a9c7</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/PathSplineTrack.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.6983639+01:00</timeStamp>
+    <typeFullName>
+      <string>PathSplineTrack</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>fef58bd01146344429d022b95c6af872</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/TestingUnitTests.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.7207724+01:00</timeStamp>
+    <typeFullName>
+      <string>DentedPixel.LTExamples.TestingUnitTests</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ed8575995d061498aa84acbaf0b377de</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/TestingZLegacy.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.7285593+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingZLegacy</string>
+      <string>TestingZLegacy+NextFunc</string>
+      <string>TestingZLegacy+TimingType</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c5a76b5b44fc4416a82391d1ab9ec33d</guid>
+    <fileName>Assets/LeanTween/Examples/Scripts/TestingZLegacyExt.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.7405578+01:00</timeStamp>
+    <typeFullName>
+      <string>TestingZLegacyExt</string>
+      <string>TestingZLegacyExt+NextFunc</string>
+      <string>TestingZLegacyExt+TimingType</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>52e41e970d9353942b27458440bec9eb</guid>
+    <fileName>Assets/LeanTween/Framework/LeanAudio.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.8575594+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanAudioStream</string>
+      <string>LeanAudio</string>
+      <string>LeanAudioOptions</string>
+      <string>LeanAudioOptions+LeanAudioWaveStyle</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>1ca0f285af8dd4270bd759978223faad</guid>
+    <fileName>Assets/LeanTween/Framework/LeanSmooth.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.8665587+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanSmooth</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>82464f26ca2ba284a8f92f51248c574a</guid>
+    <fileName>Assets/LeanTween/Framework/LeanTest.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.8705597+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanTester</string>
+      <string>LeanTest</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9c2f4b27196f84954b44753aaac214bb</guid>
+    <fileName>Assets/LeanTween/Framework/LeanTween.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.8745598+01:00</timeStamp>
+    <typeFullName>
+      <string>TweenAction</string>
+      <string>LeanTweenType</string>
+      <string>LeanProp</string>
+      <string>LeanTween</string>
+      <string>LTUtility</string>
+      <string>LTBezier</string>
+      <string>LTBezierPath</string>
+      <string>LTSpline</string>
+      <string>LTRect</string>
+      <string>LTEvent</string>
+      <string>LTGUI</string>
+      <string>LTGUI+Element_Type</string>
+      <string>DentedPixel.LeanDummy</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5dbe851e9c0814f1d8f514ecf70f675d</guid>
+    <fileName>Assets/LeanTween/Framework/LeanTweenExt.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.8911926+01:00</timeStamp>
+    <typeFullName>
+      <string>LeanTweenExt</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>381c8d6fb1acdc348870a7147bc98723</guid>
+    <fileName>Assets/LeanTween/Framework/LTDescr.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.8245583+01:00</timeStamp>
+    <typeFullName>
+      <string>LTDescr</string>
+      <string>LTDescr+EaseTypeDelegate</string>
+      <string>LTDescr+ActionMethodDelegate</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c1ba8f1ef97134cb39b52ae26678db63</guid>
+    <fileName>Assets/LeanTween/Framework/LTDescrOptional.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.8275575+01:00</timeStamp>
+    <typeFullName>
+      <string>LTDescrOptional</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>6c88dbe4cdd9944f198e9796ee394c86</guid>
+    <fileName>Assets/LeanTween/Framework/LTSeq.cs</fileName>
+    <timeStamp>2022-03-06T12:46:17.8315591+01:00</timeStamp>
+    <typeFullName>
+      <string>LTSeq</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+</ArrayOfTypeDate>
