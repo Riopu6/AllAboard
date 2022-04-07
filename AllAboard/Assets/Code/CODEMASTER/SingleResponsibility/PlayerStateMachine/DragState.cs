@@ -4,13 +4,12 @@ using UnityEngine;
 public class DragState : IPlayerState
 {
 	private readonly PlayerStateMachine Context;
-	private Vector3 CameraPosition;
 	private PlayerCollection collection;
 	private Rigidbody rig;
+	
 	public DragState(PlayerStateMachine context, PlayerCollection collection)
 	{
 		Context = context;
-		CameraPosition = Camera.main.transform.position;
 		this.collection = collection;
 	}
 
@@ -26,25 +25,29 @@ public class DragState : IPlayerState
 
 	public void RunState()
 	{
-		if (Input.GetMouseButton(0))
+		Vector3 touchPos = UserInteraction.ScreenToWorldTouchPosition;
+		Vector3 offset = Vector3Ext.GetDirectionNormalized(touchPos, UserInteraction.ScreenOriginPosition) * 20;
+		Vector3 perspective;
+
+		if (Input.GetMouseButton(0)) // Drag Passenger
 		{
-			DragPassenger();
+			perspective = touchPos + offset;
+
+			Context.transform.position = perspective;
 		}
 
-		else
+		else // Falling / Letting Go
 		{
+			Vector3 moveByX = Vector3Ext.GetDirection(Context.transform.position.ExcludeAxis(SnapAxis.Y), touchPos);
+			Vector3 moveByY = Context.transform.position.ExcludeAxis(SnapAxis.X).ExcludeAxis(SnapAxis.Z);
+
+			offset = Context.GetComponent<Collider>().bounds.size;
+
+			Context.transform.position += moveByX - moveByY + offset;
+			
 			SwitchGravity();
 			Context.SetState(Context.fallingState);
 		}
-	}
-
-	private void DragPassenger()
-	{
-		Vector3 touchPos = UserInteraction.ScreenTouchPosition;
-		Vector3 direction = Vector3Ext.GetDirection(touchPos, CameraPosition);
-		Vector3 perspective = touchPos + direction * 25;
-
-		Context.transform.position = perspective;
 	}
 
 	private void SwitchGravity()

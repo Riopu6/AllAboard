@@ -56,7 +56,7 @@ public class GroundState : IPlayerState
 	private void Rotate(Vector3 target)
 	{
 		float rotSpeed = 3f;
-		Vector3 targetDirection = Vector3Ext.GetDirection(Context.transform.position, target).ExcludeAxis(SnapAxis.Y);
+		Vector3 targetDirection = Vector3Ext.GetDirectionNormalized(Context.transform.position, target).ExcludeAxis(SnapAxis.Y);
 		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * rotSpeed);
 	}
 
