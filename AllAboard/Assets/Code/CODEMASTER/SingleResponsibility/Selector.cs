@@ -11,7 +11,7 @@ public class Selector
 
 	public Selector(GameObject MoveArea)
 	{
-		bounds = MoveArea.GetComponent<Renderer>().bounds;
+		bounds = MoveArea.GetComponent<Collider>().bounds;
 	}
 
 	public Vector3 Target { get; private set; }

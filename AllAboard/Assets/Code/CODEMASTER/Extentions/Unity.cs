@@ -86,9 +86,13 @@ namespace Unity
 				}
 				return vector;
 			}
-			public static Vector3 GetDirection(Vector3 origin, Vector3 des)
+			public static Vector3 GetDirectionNormalized(Vector3 origin, Vector3 des)
 			{
 				return (des - origin).normalized;
+			}
+			public static Vector3 GetDirection(Vector3 origin, Vector3 des)
+			{
+				return (des - origin);
 			}
 
 
