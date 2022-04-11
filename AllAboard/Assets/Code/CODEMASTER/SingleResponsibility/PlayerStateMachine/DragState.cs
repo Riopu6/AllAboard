@@ -4,10 +4,10 @@ using UnityEngine;
 public class DragState : IPlayerState
 {
 	private readonly PlayerStateMachine Context;
-	private PlayerCollection collection;
+	private StateCollection collection;
 	private Rigidbody rig;
 	
-	public DragState(PlayerStateMachine context, PlayerCollection collection)
+	public DragState(PlayerStateMachine context, StateCollection collection)
 	{
 		Context = context;
 		this.collection = collection;
@@ -19,7 +19,7 @@ public class DragState : IPlayerState
 	{
 		rig = Context.GetComponent<Rigidbody>();
 		SwitchGravity();
-		Context.PlayAnimation(collection.animationName);
+		Context.PlayAnimation(collection.AnimationName);
 	}
 
 

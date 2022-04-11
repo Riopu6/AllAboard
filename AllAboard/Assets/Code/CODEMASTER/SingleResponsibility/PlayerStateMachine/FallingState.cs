@@ -3,9 +3,9 @@ using UnityEngine;
 public class FallingState : IPlayerState
 {
 	private PlayerStateMachine Context;
-	private PlayerCollection collection;
+	private StateCollection collection;
 
-	public FallingState(PlayerStateMachine context, PlayerCollection fallingCollection)
+	public FallingState(PlayerStateMachine context, StateCollection fallingCollection)
 	{
 		Context = context;
 		collection = fallingCollection;
@@ -13,7 +13,7 @@ public class FallingState : IPlayerState
 
 	public void EnterState()
 	{
-		Context.PlayAnimation(collection.animationName);
+		Context.PlayAnimation(collection.AnimationName);
 	}
 	public void RunState()
 	{

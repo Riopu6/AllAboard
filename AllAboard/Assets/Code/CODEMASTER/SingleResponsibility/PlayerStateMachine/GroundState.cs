@@ -5,11 +5,11 @@ public class GroundState : IPlayerState
 {
 	private readonly PlayerStateMachine Context;
 	private Rigidbody rig;
-	private PlayerCollection collection;
+	private StateCollection collection;
 
 	private Selector selector;
 
-	public GroundState(PlayerStateMachine context, PlayerCollection collection)
+	public GroundState(PlayerStateMachine context, StateCollection collection)
 	{
 		Context = context;
 		this.collection = collection;
@@ -18,7 +18,7 @@ public class GroundState : IPlayerState
 	public void EnterState()
 	{
 		rig = Context.GetComponent<Rigidbody>();
-		Context.PlayAnimation(collection.animationName);
+		Context.PlayAnimation(collection.AnimationName);
 	}
 
 	public void RunState()
