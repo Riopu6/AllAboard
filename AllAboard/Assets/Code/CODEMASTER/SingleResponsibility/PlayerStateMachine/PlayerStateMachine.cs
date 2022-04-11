@@ -5,10 +5,10 @@ public class PlayerStateMachine : MonoBehaviour
 {
 	public Animator Animator;
 
-	#region PlayerCollections
-	[SerializeField] PlayerCollection groundedCollection;
-	[SerializeField] PlayerCollection dragCollection;
-	[SerializeField] PlayerCollection fallingCollection;
+	#region StateCollections
+	[SerializeField] StateCollection groundedCollection;
+	[SerializeField] StateCollection dragCollection;
+	[SerializeField] StateCollection fallingCollection;
 	#endregion
 
 	private IPlayerState currentState;

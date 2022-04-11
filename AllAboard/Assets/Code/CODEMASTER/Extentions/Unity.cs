@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -15,7 +16,9 @@ namespace Unity
 			public static T GetRandomElement<T>(this IEnumerable<T> list)
 			{
 				if (list.Count() == 0)
+				{
 					return default;
+				}
 
 				return list.ElementAt(Random.Range(0, list.Count()));
 			}
@@ -142,6 +145,40 @@ namespace Unity
 			public static void Print(this object toPrint, Object context = null)
 			{
 				Debug.Log(toPrint, context);
+			}
+			public static void Print(this object toPrint, string seperator, params object[] extraInfo)
+			{
+				Debug.Log(toPrint + seperator + string.Join(seperator, extraInfo));
+			}
+		}
+
+		public class Timer
+		{
+			private static MonoBehaviour monoInstance;
+
+			public Timer(MonoBehaviour monoBehaviour)
+			{
+				monoInstance = monoBehaviour;
+			}
+			public void DelayForSeconds(float seconds, System.Action action)
+			{
+				monoInstance.StartCoroutine(WaitForSeconds(seconds, action));
+			}
+
+			public void DelayUntil(System.Func<bool> func, System.Action action)
+			{
+				monoInstance.StartCoroutine(WaitUntil(func, action));
+			}
+
+			private IEnumerator WaitForSeconds(float seconds, System.Action action)
+			{
+				yield return new WaitForSeconds(seconds);
+				action();
+			}
+			private IEnumerator WaitUntil(System.Func<bool> funk, System.Action action)
+			{
+				yield return new WaitUntil(funk);
+				action();
 			}
 		}
 	}
