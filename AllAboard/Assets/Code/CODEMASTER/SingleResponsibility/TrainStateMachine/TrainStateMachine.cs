@@ -17,12 +17,14 @@ public class TrainStateMachine : MonoBehaviour
 	public TrainEnter trainEnter;
 	public TrainOpenDoors trainOpenDoors;
 	public TrainExit trainExit;
+	public TrainReset trainReset;
 
 	private void Start()
 	{
 		trainEnter = new TrainEnter(this, TrainEnterCollection);
 		trainOpenDoors = new TrainOpenDoors(this, TrainOpenDoorsCollection);
 		trainExit = new TrainExit(this, TrainExitCollection);
+		trainReset = new TrainReset(this);
 
 		SetState(trainEnter);
 
@@ -43,10 +45,5 @@ public class TrainStateMachine : MonoBehaviour
 	public void PlayAnimation(string animation)
 	{
 		Animator.Play(animation);
-	}
-
-	public void DestroyTrain()
-	{
-		Destroy(gameObject);
 	}
 }
