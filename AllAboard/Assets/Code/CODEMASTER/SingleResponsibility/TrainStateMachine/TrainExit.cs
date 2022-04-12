@@ -26,7 +26,7 @@ public class TrainExit : ITrainState
 			Move();
 			if (Context.Rig.position.AproxMatch(EndPosition))
 			{
-				Context.DestroyTrain();
+				Context.SetState(Context.trainReset);
 
 			}
 		}
@@ -42,9 +42,8 @@ public class TrainExit : ITrainState
 		Vector3 startPosition = Context.transform.position;
 		Vector3 platformPosition = EndPosition;
 
-		float moveSpeed = 1.5f;
-		var velocity = Vector3.zero;
-		Context.Rig.position = Vector3.Lerp(startPosition, platformPosition, Time.deltaTime * moveSpeed);
+		float moveSpeed = 100f;
+		Context.Rig.position = Vector3.MoveTowards(startPosition, platformPosition, Time.deltaTime * moveSpeed);
 
 	}
 
