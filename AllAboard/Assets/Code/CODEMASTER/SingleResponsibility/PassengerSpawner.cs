@@ -20,8 +20,7 @@ public class PassengerSpawner : MonoBehaviour
 	{
 		if (currentCount < maxCount)
 		{
-			Action action = () => { Instantiate(Prefabs.GetRandomElement(), Spawns.GetRandomElement().position, Quaternion.identity); currentCount++; };
-			timer.DelayForSecondsRepeat(1, action);
+			timer.DelayForSecondsRepeat(1, () => { Instantiate(Prefabs.GetRandomElement(), Spawns.GetRandomElement().position, Quaternion.identity); currentCount++; });
 		}
 	}
 

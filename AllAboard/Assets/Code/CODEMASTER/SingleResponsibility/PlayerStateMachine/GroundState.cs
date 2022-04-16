@@ -41,27 +41,28 @@ public class GroundState : IPlayerState
 	{
 		Collider collider = collision.collider;
 
-		if (collider.CompareTag("Ground"))
-		{
-			selector = new Selector(collision.gameObject);
-		}
-		if (collider.CompareTag("Stairs"))
-		{
-			selector = new Selector(Vector3.zero);
-		}
+		if (collider.CompareTag("Ground")) selector = new Selector(collision.gameObject);
+		
+		if (collider.CompareTag("Stairs")) selector = new Selector(Vector3.zero);
+
+		
+	}
+
+	public void OnTriggerEnter(Collider other) 
+	{
+		Debug.Log("TriggerPlatform");
+		if (other.CompareTag("Platform")) Context.SetState(Context.trainState);
 	}
 
 	private void Move(Vector3 target)
 	{
-		float moveSpeed = 5f;
-		Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * moveSpeed);
+		Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constraints.PassengerMovingSpeed);
 	}
 
 	private void Rotate(Vector3 target)
 	{
-		float rotSpeed = 3f;
 		Vector3 targetDirection = Vector3Ext.GetDirectionNormalized(Context.transform.position, target).ExcludeAxis(SnapAxis.Y);
-		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * rotSpeed);
+		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * Constraints.PassengerRotationSpeed);
 	}
 
 }

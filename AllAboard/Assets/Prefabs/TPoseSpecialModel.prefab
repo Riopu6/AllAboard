@@ -1841,7 +1841,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 7400000, guid: 8e5884f5a3a30fc4db74ab07d2a77195, type: 2}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 7400000, guid: 09a02da4d2bc14c4bbc2240a7a016ac6, type: 2}
 --- !u!114 &4833859685150225528
 MonoBehaviour:
   m_ObjectHideFlags: 0
