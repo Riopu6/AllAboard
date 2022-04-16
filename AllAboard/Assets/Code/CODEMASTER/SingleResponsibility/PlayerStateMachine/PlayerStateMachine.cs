@@ -17,6 +17,8 @@ public class PlayerStateMachine : MonoBehaviour
 	public DragState dragState;
 	public FallingState fallingState;
 
+	public Rigidbody Rig { get; private set; }
+
 	private void Start()
 	{
 		groundState = new GroundState(this, groundedCollection);
@@ -24,6 +26,8 @@ public class PlayerStateMachine : MonoBehaviour
 		fallingState = new FallingState(this, fallingCollection);
 
 		SetState(groundState);
+
+		Rig = GetComponent<Rigidbody>();
 	}
 
 	private void FixedUpdate()

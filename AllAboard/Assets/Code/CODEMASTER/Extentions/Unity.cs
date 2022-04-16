@@ -155,21 +155,29 @@ namespace Unity
 		public class Timer
 		{
 			private static MonoBehaviour monoInstance;
+			public float timeIsUp = 0;
 
 			public Timer(MonoBehaviour monoBehaviour)
 			{
 				monoInstance = monoBehaviour;
 			}
-			public void DelayForSeconds(float seconds, System.Action action)
+			public void DelayForSecondsOnce(float seconds, System.Action action) => monoInstance.StartCoroutine(WaitForSeconds(seconds, action));
+
+			public void DelayUntilOnce(System.Func<bool> func, System.Action action) => monoInstance.StartCoroutine(WaitUntil(func, action));
+
+			public void DelayForSecondsRepeat(float seconds, System.Action action)
 			{
-				monoInstance.StartCoroutine(WaitForSeconds(seconds, action));
+				if (timeIsUp >= seconds)
+				{
+					action();
+					timeIsUp = 0;
+				}
+				
+				timeIsUp += Time.deltaTime;
+
 			}
 
-			public void DelayUntil(System.Func<bool> func, System.Action action)
-			{
-				monoInstance.StartCoroutine(WaitUntil(func, action));
-			}
-
+			#region IEnumerators
 			private IEnumerator WaitForSeconds(float seconds, System.Action action)
 			{
 				yield return new WaitForSeconds(seconds);
@@ -180,6 +188,7 @@ namespace Unity
 				yield return new WaitUntil(funk);
 				action();
 			}
+			#endregion
 		}
 	}
 }

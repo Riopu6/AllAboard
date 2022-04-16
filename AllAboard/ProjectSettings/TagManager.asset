@@ -12,6 +12,7 @@ TagManager:
   - FastFood
   - Platform
   - TrainStop
+  - Stairs
   layers:
   - Default
   - TransparentFX
