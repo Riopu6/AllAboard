@@ -1,4 +1,5 @@
-﻿using Unity.Extentions;
+﻿using System.Collections.Generic;
+using Unity.Extentions;
 using UnityEngine;
 
 public class Selector
@@ -9,19 +10,15 @@ public class Selector
 	private bool changePosition = true;
 	#endregion
 	public Vector3 Target { get; private set; }
+	public List<Vector3> TrainPathPoints { get; private set; }
+
 	public Selector(GameObject MoveArea) => bounds = MoveArea.GetComponent<Collider>().bounds;
 	public Selector(Vector3 Point) => Target = Point;
 
 	#region Functions
-	public static Vector3 GetRandomPointFrom(Vector3 currentPosition, float min, float max)
-	{
-		return currentPosition + RandomGetter.GetRandomVector3(min, max);
-	}
+	public static Vector3 GetRandomPointFrom(Vector3 currentPosition, float min, float max) => currentPosition + RandomGetter.GetRandomVector3(min, max);
 
-	public static Vector3 GetRandomPointFrom(Vector3 currentPosition, float radius)
-	{
-		return currentPosition + RandomGetter.GetRandomVector3(-radius, radius);
-	}
+	public static Vector3 GetRandomPointFrom(Vector3 currentPosition, float radius) => currentPosition + RandomGetter.GetRandomVector3(-radius, radius);
 
 	public Vector3 KeepRandomPointOnArea(Vector3 currentPosition, float marginOfError = 0.1f)
 	{
@@ -43,6 +40,7 @@ public class Selector
 
 		return keepRandomPoint;
 	}
+
 
 	private bool IsPointValid(Bounds moveAreaBounds, Vector3 point)
 	{

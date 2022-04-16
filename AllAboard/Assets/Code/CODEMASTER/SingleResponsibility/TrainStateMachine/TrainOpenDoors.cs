@@ -18,7 +18,7 @@ public class TrainOpenDoors : ITrainState
 	public void RunState()
 	{
 		Timer timer = new Timer(Context);
-		timer.DelayForSecondsOnce(2, () =>
+		timer.DelayForSecondsOnce(10, () =>
 		{
 			Context.SetState(Context.trainExit);
 		});

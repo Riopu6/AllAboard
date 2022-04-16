@@ -14,6 +14,8 @@ public class DragState : IPlayerState
 
 	public void OnCollisionEnter(Collision collision) { }
 
+	public void OnTriggerEnter(Collider other) { }
+
 	public void EnterState()
 	{
 		SwitchGravity();

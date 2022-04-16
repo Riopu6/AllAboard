@@ -444,7 +444,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &73148349
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -502,7 +504,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &154778889
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2324,7 +2328,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &291034503
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2382,7 +2388,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &291740019
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2440,7 +2448,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &297623067
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2792,7 +2802,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &341246368
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2850,7 +2862,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &343364252
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3202,7 +3216,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &468526312
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3326,7 +3342,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &544963606
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3678,7 +3696,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &556654392
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4679,7 +4699,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &705538375
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4737,7 +4759,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &734675694
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5449,7 +5473,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1066613677
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5507,7 +5533,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1087148909
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5660,7 +5688,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1100210530
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6306,7 +6336,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1152592879
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6364,7 +6396,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1161188791
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7387,7 +7421,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1304889471
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7445,7 +7481,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1310766903
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7503,7 +7541,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1336834291
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7541,6 +7581,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 356050467, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -48.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064023740, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -49
+      objectReference: {fileID: 0}
     - target: {fileID: 8280060689274341958, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
       propertyPath: m_Name
       value: TrainStation1
@@ -8920,7 +8968,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1574881750
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8978,7 +9028,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1633982557
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9036,7 +9088,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1635633829
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9388,7 +9442,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1646481342
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10505,7 +10561,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1855522133
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10563,7 +10621,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1906070582
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10716,7 +10776,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &1990507593
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10774,7 +10836,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &2000860517
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11126,7 +11190,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &2009601905
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11872,7 +11938,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &2111920739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11930,7 +11998,9 @@ MonoBehaviour:
   fallingCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 0}
-  Rig: {fileID: 0}
+  trainCollection:
+    audioClip: {fileID: 0}
+    animation: {fileID: 0}
 --- !u!136 &2117186222
 CapsuleCollider:
   m_ObjectHideFlags: 0

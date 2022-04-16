@@ -9,51 +9,22 @@ namespace Unity
 	{
 		public static class RandomGetter
 		{
-			public static Vector3 GetRandomVector3(float min = float.MinValue, float max = float.MaxValue)
-			{
-				return new Vector3(Random.Range(min, max), Random.Range(min, max), Random.Range(min, max));
-			}
-			public static T GetRandomElement<T>(this IEnumerable<T> list)
-			{
-				if (list.Count() == 0)
-				{
-					return default;
-				}
-
-				return list.ElementAt(Random.Range(0, list.Count()));
-			}
+			public static Vector3 GetRandomVector3(float min = float.MinValue, float max = float.MaxValue) => new Vector3(Random.Range(min, max), Random.Range(min, max), Random.Range(min, max));
+			public static T GetRandomElement<T>(this IEnumerable<T> list) => list.Count() == 0 ? default : list.ElementAt(Random.Range(0, list.Count()));
 		}
 
 
 		public static class MathExt
 		{
-			public static bool AproxMatch(this Vector3 vector, Vector3 compare, float marginOfError = 0.1f)
-			{
-				return Vector3.Distance(vector, compare) <= marginOfError;
-			}
-			public static bool AproxMatch(this Vector2 vector, Vector2 compare, float marginOfError = 0.1f)
-			{
-				return Vector2.Distance(vector, compare) <= marginOfError;
-			}
+			public static bool AproxMatch(this Vector3 vector, Vector3 compare, float marginOfError = 0.1f) => Vector3.Distance(vector, compare) <= marginOfError;
+			public static bool AproxMatch(this Vector2 vector, Vector2 compare, float marginOfError = 0.1f) => Vector2.Distance(vector, compare) <= marginOfError;
 		}
 
 		public static class Vector3Ext
 		{
-			public static Vector3 ReplaceX(this Vector3 vector, float value)
-			{
-				vector.x = value;
-				return vector;
-			}
-			public static Vector3 ReplaceY(this Vector3 vector, float value)
-			{
-				vector.y = value;
-				return vector;
-			}
-			public static Vector3 ReplaceZ(this Vector3 vector, float value)
-			{
-				vector.z = value;
-				return vector;
-			}
+			public static Vector3 ReplaceX(this Vector3 vector, float value) { vector.x = value; return vector; }
+			public static Vector3 ReplaceY(this Vector3 vector, float value) { vector.y = value; return vector; }
+			public static Vector3 ReplaceZ(this Vector3 vector, float value) { vector.z = value; return vector; }
 			public static Vector3 AddX(this Transform transform, float value)
 			{
 				var tranPos = transform.position;
@@ -89,14 +60,9 @@ namespace Unity
 				}
 				return vector;
 			}
-			public static Vector3 GetDirectionNormalized(Vector3 origin, Vector3 des)
-			{
-				return (des - origin).normalized;
-			}
-			public static Vector3 GetDirection(Vector3 origin, Vector3 des)
-			{
-				return (des - origin);
-			}
+			public static Vector3 GetDirectionNormalized(Vector3 origin, Vector3 des) => (des - origin).normalized;
+
+			public static Vector3 GetDirection(Vector3 origin, Vector3 des) => (des - origin);
 
 
 		}
@@ -134,28 +100,19 @@ namespace Unity
 
 		public static class ConvertExt
 		{
-			public static Vector2 ToVector2(this Vector3 vector)
-			{
-				return vector;
-			}
+			public static Vector2 ToVector2(this Vector3 vector) => vector;
 		}
 
 		public static class DebugExt
 		{
-			public static void Print(this object toPrint, Object context = null)
-			{
-				Debug.Log(toPrint, context);
-			}
-			public static void Print(this object toPrint, string seperator, params object[] extraInfo)
-			{
-				Debug.Log(toPrint + seperator + string.Join(seperator, extraInfo));
-			}
+			public static void Print(this object toPrint, Object context = null) => Debug.Log(toPrint, context);
+			public static void Print(this object toPrint, string seperator, params object[] extraInfo) => Debug.Log(toPrint + seperator + string.Join(seperator, extraInfo));
 		}
 
 		public class Timer
 		{
 			private static MonoBehaviour monoInstance;
-			public float timeIsUp = 0;
+			private float timeIsUp = 0;
 
 			public Timer(MonoBehaviour monoBehaviour)
 			{
@@ -172,7 +129,7 @@ namespace Unity
 					action();
 					timeIsUp = 0;
 				}
-				
+
 				timeIsUp += Time.deltaTime;
 
 			}
