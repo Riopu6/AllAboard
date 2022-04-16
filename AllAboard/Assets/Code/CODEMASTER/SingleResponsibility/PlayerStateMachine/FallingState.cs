@@ -15,10 +15,7 @@ public class FallingState : IPlayerState
 	{
 		Context.PlayAnimation(collection.AnimationName);
 	}
-	public void RunState()
-	{
-
-	}
+	public void RunState() {}
 
 	public void OnCollisionEnter(Collision collision) { Context.SetState(Context.groundState); Context.groundState.OnCollisionEnter(collision); }
 

@@ -5,7 +5,6 @@ public class DragState : IPlayerState
 {
 	private readonly PlayerStateMachine Context;
 	private StateCollection collection;
-	private Rigidbody rig;
 	
 	public DragState(PlayerStateMachine context, StateCollection collection)
 	{
@@ -17,7 +16,6 @@ public class DragState : IPlayerState
 
 	public void EnterState()
 	{
-		rig = Context.GetComponent<Rigidbody>();
 		SwitchGravity();
 		Context.PlayAnimation(collection.AnimationName);
 	}
@@ -50,8 +48,5 @@ public class DragState : IPlayerState
 		}
 	}
 
-	private void SwitchGravity()
-	{
-		rig.useGravity = !rig.useGravity;
-	}
+	private void SwitchGravity() => Context.Rig.useGravity = !Context.Rig.useGravity;
 }

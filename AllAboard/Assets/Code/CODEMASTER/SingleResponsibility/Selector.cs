@@ -8,13 +8,9 @@ public class Selector
 	private Vector3 keepRandomPoint = Vector3.zero;
 	private bool changePosition = true;
 	#endregion
-
-	public Selector(GameObject MoveArea)
-	{
-		bounds = MoveArea.GetComponent<Collider>().bounds;
-	}
-
 	public Vector3 Target { get; private set; }
+	public Selector(GameObject MoveArea) => bounds = MoveArea.GetComponent<Collider>().bounds;
+	public Selector(Vector3 Point) => Target = Point;
 
 	#region Functions
 	public static Vector3 GetRandomPointFrom(Vector3 currentPosition, float min, float max)

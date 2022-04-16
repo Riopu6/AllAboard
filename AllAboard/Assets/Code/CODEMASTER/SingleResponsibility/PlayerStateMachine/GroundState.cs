@@ -4,7 +4,6 @@ using UnityEngine;
 public class GroundState : IPlayerState
 {
 	private readonly PlayerStateMachine Context;
-	private Rigidbody rig;
 	private StateCollection collection;
 
 	private Selector selector;
@@ -17,7 +16,6 @@ public class GroundState : IPlayerState
 
 	public void EnterState()
 	{
-		rig = Context.GetComponent<Rigidbody>();
 		Context.PlayAnimation(collection.AnimationName);
 	}
 
@@ -41,16 +39,22 @@ public class GroundState : IPlayerState
 	}
 	public void OnCollisionEnter(Collision collision)
 	{
-		if (collision.collider.CompareTag("Ground"))
+		Collider collider = collision.collider;
+
+		if (collider.CompareTag("Ground"))
 		{
 			selector = new Selector(collision.gameObject);
+		}
+		if (collider.CompareTag("Stairs"))
+		{
+			selector = new Selector(Vector3.zero);
 		}
 	}
 
 	private void Move(Vector3 target)
 	{
 		float moveSpeed = 5f;
-		rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * moveSpeed);
+		Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * moveSpeed);
 	}
 
 	private void Rotate(Vector3 target)
