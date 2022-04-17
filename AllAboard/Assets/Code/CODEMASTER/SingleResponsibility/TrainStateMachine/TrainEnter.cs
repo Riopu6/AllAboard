@@ -39,12 +39,8 @@ public class TrainEnter : ITrainState
 		Vector3 startPosition = Context.transform.position;
 		Vector3 platformPosition = StopPosition;
 
-		float moveSpeed = 2.5f;
-		Context.Rig.position = Vector3.Lerp(startPosition, platformPosition, Time.deltaTime * moveSpeed);
+		Context.Rig.position = Vector3.Lerp(startPosition, platformPosition, Time.deltaTime * Constants.TrainMoveSpeed);
 
 	}
-	private Vector3 GetRandomPlatform()
-	{
-		return new Vector3[] { Context.MovePoints.Stop1Position, Context.MovePoints.Stop2Position }.GetRandomElement();
-	}
+	private Vector3 GetRandomPlatform() => new Vector3[] { Context.MovePoints.Stop1Position, Context.MovePoints.Stop2Position }.GetRandomElement();
 }

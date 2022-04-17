@@ -11,6 +11,8 @@ public class PlatformPath : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+		if (!other.CompareTag("Passenger")) return;
+
 		Vector3 ClosestPosition = Vector3.Distance(other.transform.position, ClosestPoint1.position) < Vector3.Distance(other.transform.position, ClosestPoint2.position) ? ClosestPoint1.position : ClosestPoint2.position;
 
 		Vector3 BridgePosition = ClosestPosition == ClosestPoint1.position ? Bridge1.position : Bridge2.position;

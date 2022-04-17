@@ -7581,13 +7581,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 356050467, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -48.8
+    - target: {fileID: 945652730086952727, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1064023740, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -49
+    - target: {fileID: 4870737733905527414, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8280060689274341958, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
       propertyPath: m_Name

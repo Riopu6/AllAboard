@@ -27,7 +27,6 @@ public class TrainExit : ITrainState
 			if (Context.Rig.position.AproxMatch(EndPosition))
 			{
 				Context.SetState(Context.trainReset);
-
 			}
 		}
 
