@@ -56,13 +56,13 @@ public class GroundState : IPlayerState
 
 	private void Move(Vector3 target)
 	{
-		Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constraints.PassengerMovingSpeed);
+		Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
 	}
 
 	private void Rotate(Vector3 target)
 	{
 		Vector3 targetDirection = Vector3Ext.GetDirectionNormalized(Context.transform.position, target).ExcludeAxis(SnapAxis.Y);
-		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * Constraints.PassengerRotationSpeed);
+		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * Constants.PassengerRotationSpeed);
 	}
 
 }

@@ -28,9 +28,9 @@ public class TrainState : IPlayerState
 
 	private Vector3 GetTrainPoint()
 	{
-		if (Context.Rig.position.AproxMatch(TrainPathPoints[index]))
+		if (Context.Rig.position.AproxMatch(TrainPathPoints[index], Constants.NearATrain))
 		{
-			index = Mathf.Clamp(index + 1, 0, TrainPathPoints.Count);
+			index = Mathf.Clamp(index + 1, 0, TrainPathPoints.Count - 1);
 		}
 
 		return TrainPathPoints[index];
@@ -40,12 +40,12 @@ public class TrainState : IPlayerState
 
 	public void OnTriggerEnter(Collider other) { }
 
-	private void Move(Vector3 target) => Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constraints.PassengerMovingSpeed);
+	private void Move(Vector3 target) => Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
 
 	private void Rotate(Vector3 target)
 	{
 		Vector3 targetDirection = Vector3Ext.GetDirectionNormalized(Context.transform.position, target).ExcludeAxis(SnapAxis.Y);
-		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * Constraints.PassengerRotationSpeed);
+		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * Constants.PassengerRotationSpeed);
 	}
 
 }

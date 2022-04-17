@@ -8,7 +8,7 @@ public class PassengerSpawner : MonoBehaviour
 	[SerializeField] List<GameObject> Prefabs = new List<GameObject>();
 	[SerializeField] List<Transform> Spawns = new List<Transform>();
 
-	private readonly int maxCount = Constraints.MaxPassengers;
+	private readonly int maxCount = Constants.MaxPassengers;
 	private int currentCount = 0;
 	private Timer timer;
 

@@ -13,6 +13,7 @@ public class TrainStateMachine : MonoBehaviour
 	#endregion
 
 	private ITrainState currentState;
+	private ITrainState lastState;
 
 	public TrainEnter trainEnter;
 	public TrainOpenDoors trainOpenDoors;
@@ -39,7 +40,12 @@ public class TrainStateMachine : MonoBehaviour
 	public void SetState(ITrainState state)
 	{
 		currentState = state;
-		currentState.EnterState();
+
+		if (lastState != currentState)
+		{
+			lastState = currentState;
+			currentState.EnterState();
+		}
 	}
 
 	public void PlayAnimation(string animation)
