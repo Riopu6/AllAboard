@@ -19,7 +19,11 @@ public class PlayerStateMachine : MonoBehaviour
 	public FallingState fallingState;
 	public TrainState trainState;
 
-	public Rigidbody Rig { get; private set; }
+	public Rigidbody Rigidbody { get; private set; }
+	public Collider Collider { get; private set; }
+
+
+	#region Unity Callbacks
 
 	private void Start()
 	{
@@ -30,20 +34,25 @@ public class PlayerStateMachine : MonoBehaviour
 
 		SetState(groundState);
 
-		Rig = GetComponent<Rigidbody>();
+		Rigidbody = GetComponent<Rigidbody>();
+		Collider = GetComponent<Collider>();
 	}
-
 	private void FixedUpdate() => currentState?.RunState();
+	private void OnCollisionEnter(Collision collision) => currentState.OnCollisionEnter(collision);
+	private void OnTriggerEnter(Collider other) => currentState.OnTriggerEnter(other);
+	
+	#endregion
+
+	#region Player State Machine
 
 	public void SetState(IPlayerState state)
 	{
 		currentState = state;
 		currentState.EnterState();
 	}
-
 	public void PlayAnimation(string animation) => Animator.Play(animation);
+	public void DestroyObject() => Destroy(gameObject);
 
-	private void OnCollisionEnter(Collision collision) => currentState.OnCollisionEnter(collision);
+	#endregion
 
-	private void OnTriggerEnter(Collider other) => currentState.OnTriggerEnter(other);
 }

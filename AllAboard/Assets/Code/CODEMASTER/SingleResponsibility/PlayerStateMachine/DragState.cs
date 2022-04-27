@@ -50,5 +50,5 @@ public class DragState : IPlayerState
 		}
 	}
 
-	private void SwitchGravity() => Context.Rig.useGravity = !Context.Rig.useGravity;
+	private void SwitchGravity() => Context.Rigidbody.useGravity = !Context.Rigidbody.useGravity;
 }

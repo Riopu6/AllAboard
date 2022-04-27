@@ -963,7 +963,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857816925647128380}
-  m_Mesh: {fileID: -5795158982173061755, guid: afe7bd9df72b4d94194189d6c58537de, type: 3}
+  m_Mesh: {fileID: 1152975304387083725, guid: afe7bd9df72b4d94194189d6c58537de, type: 3}
 --- !u!23 &7642407008190250152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2229,7 +2229,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3186982354885938961}
-  m_Mesh: {fileID: 2700354272823574166, guid: afe7bd9df72b4d94194189d6c58537de, type: 3}
+  m_Mesh: {fileID: 4336706434927076308, guid: afe7bd9df72b4d94194189d6c58537de, type: 3}
 --- !u!23 &369517890033481628
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4643,7 +4643,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7520919268127894889}
-  m_Mesh: {fileID: -6692290496178104961, guid: afe7bd9df72b4d94194189d6c58537de, type: 3}
+  m_Mesh: {fileID: 4336706434927076308, guid: afe7bd9df72b4d94194189d6c58537de, type: 3}
 --- !u!23 &4157098553618893495
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5890,6 +5890,10 @@ PrefabInstance:
       propertyPath: MovePoints.Stop2
       value: 
       objectReference: {fileID: 1572110066489024670}
+    - target: {fileID: 2913328482774982317, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
+      propertyPath: m_TagString
+      value: TrainCenter
+      objectReference: {fileID: 0}
     - target: {fileID: 4964667637259488950, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
       propertyPath: m_Name
       value: Train_2
@@ -5993,6 +5997,10 @@ PrefabInstance:
       propertyPath: MovePoints.Stop2
       value: 
       objectReference: {fileID: 6574785956517072825}
+    - target: {fileID: 2913328482774982317, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
+      propertyPath: m_TagString
+      value: TrainCenter
+      objectReference: {fileID: 0}
     - target: {fileID: 4964667637259488950, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
       propertyPath: m_Name
       value: Train_1

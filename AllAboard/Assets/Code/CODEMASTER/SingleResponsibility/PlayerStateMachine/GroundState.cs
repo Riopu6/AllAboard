@@ -33,7 +33,6 @@ public class GroundState : IPlayerState
 
 		if (UserInteraction.SelectedCollider == Context.GetComponent<Collider>())
 		{
-			Debug.Log(UserInteraction.SelectedCollider);
 			Context.SetState(Context.dragState);
 		}
 	}
@@ -56,7 +55,7 @@ public class GroundState : IPlayerState
 
 	private void Move(Vector3 target)
 	{
-		Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
+		Context.Rigidbody.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
 	}
 
 	private void Rotate(Vector3 target)
