@@ -20,6 +20,9 @@ public class TrainStateMachine : MonoBehaviour
 	public TrainExit trainExit;
 	public TrainReset trainReset;
 
+
+	#region Unity Callbacks
+
 	private void Start()
 	{
 		trainEnter = new TrainEnter(this, TrainEnterCollection);
@@ -32,10 +35,11 @@ public class TrainStateMachine : MonoBehaviour
 		Rig = GetComponent<Rigidbody>();
 	}
 
-	private void FixedUpdate()
-	{
-		currentState?.RunState();
-	}
+	private void FixedUpdate() => currentState?.RunState();
+
+	#endregion
+
+	#region Train State Machine
 
 	public void SetState(ITrainState state)
 	{
@@ -52,4 +56,6 @@ public class TrainStateMachine : MonoBehaviour
 	{
 		Animator.Play(animation);
 	}
+
+	#endregion
 }

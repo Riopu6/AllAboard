@@ -439,7 +439,8 @@ GameObject:
   - component: {fileID: 1316320410016645209}
   - component: {fileID: 1316320410016645210}
   - component: {fileID: 8194995060025589999}
-  - component: {fileID: 7021928582906175329}
+  - component: {fileID: 54021809573980759}
+  - component: {fileID: 3686208737641303366}
   m_Layer: 0
   m_Name: Train_1
   m_TagString: Untagged
@@ -629,12 +630,12 @@ BoxCollider:
   m_GameObject: {fileID: 4964667637259488950}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.011037174, y: 0.08993062, z: 0.0010495754}
   m_Center: {x: -0.0000000033824037, y: -0.000000019373438, z: -0.0069160243}
---- !u!64 &7021928582906175329
-MeshCollider:
+--- !u!65 &54021809573980759
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -643,10 +644,22 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1598662020644186006, guid: afe7bd9df72b4d94194189d6c58537de, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.011037165, y: 0.0067653595, z: 0.017019128}
+  m_Center: {x: -1.1866335e-15, y: 0.04158269, z: 0.0010687582}
+--- !u!65 &3686208737641303366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964667637259488950}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011037165, y: 0.00676536, z: 0.01701913}
+  m_Center: {x: 1.186634e-15, y: -0.042582158, z: 0.001068758}
 --- !u!1 &5320031861865814247
 GameObject:
   m_ObjectHideFlags: 0

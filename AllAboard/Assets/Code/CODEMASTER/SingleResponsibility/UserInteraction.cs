@@ -37,7 +37,6 @@ public class UserInteraction : MonoBehaviour
 				{
 					SelectedCollider = hitInfo.collider;
 					isSelectedCollider = true;
-					Debug.DrawLine(ray.origin, SelectedCollider.transform.position, Color.red);
 				}
 			}
 		}

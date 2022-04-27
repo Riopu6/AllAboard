@@ -11,11 +11,10 @@ public class TrainState : IPlayerState
 	private readonly StateCollection collection;
 	private int index = 0;
 
-
 	public TrainState(PlayerStateMachine context, StateCollection trainCollection)
 	{
 		Context = context;
-		this.collection = trainCollection;
+		collection = trainCollection;
 	}
 
 	public void EnterState() => Context.PlayAnimation(collection.AnimationName);
@@ -24,11 +23,16 @@ public class TrainState : IPlayerState
 	{
 		Move(GetTrainPoint());
 		Rotate(GetTrainPoint());
+		
+		if (UserInteraction.SelectedCollider == Context.Collider)
+		{
+			Context.SetState(Context.dragState);
+		}
 	}
 
 	private Vector3 GetTrainPoint()
 	{
-		if (Context.Rig.position.AproxMatch(TrainPathPoints[index], Constants.NearATrain))
+		if (Context.Rigidbody.position.AproxMatch(TrainPathPoints[index], Constants.NearATrain))
 		{
 			index = Mathf.Clamp(index + 1, 0, TrainPathPoints.Count - 1);
 		}
@@ -38,9 +42,9 @@ public class TrainState : IPlayerState
 
 	public void OnCollisionEnter(Collision collision) { }
 
-	public void OnTriggerEnter(Collider other) { }
+	public void OnTriggerEnter(Collider other) { if (other.CompareTag("TrainCenter")) { Context.DestroyObject(); } }
 
-	private void Move(Vector3 target) => Context.Rig.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
+	private void Move(Vector3 target) => Context.Rigidbody.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
 
 	private void Rotate(Vector3 target)
 	{
