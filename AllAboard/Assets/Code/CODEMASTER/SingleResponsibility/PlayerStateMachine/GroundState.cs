@@ -41,10 +41,8 @@ public class GroundState : IPlayerState
 		Collider collider = collision.collider;
 
 		if (collider.CompareTag("Ground")) selector = new Selector(collision.gameObject);
-		
-		if (collider.CompareTag("Stairs")) selector = new Selector(Vector3.zero);
-
-		
+		if (collider.CompareTag("Return")) selector = new Selector(GameObject.FindGameObjectWithTag("Ground"));
+		if (collider.CompareTag("Stairs")) selector = new Selector(Vector3.one);
 	}
 
 	public void OnTriggerEnter(Collider other) 
