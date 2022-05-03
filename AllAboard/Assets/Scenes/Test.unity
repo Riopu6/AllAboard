@@ -7581,6 +7581,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2821099753570674025, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1222306850}
     - target: {fileID: 8280060689274341958, guid: 965e1a34cc583e345921840263a4d43a, type: 3}
       propertyPath: m_Name
       value: TrainStation1

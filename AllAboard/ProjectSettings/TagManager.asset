@@ -6,14 +6,12 @@ TagManager:
   tags:
   - Ground
   - Passenger
-  - CoffeShop
-  - StoreShop
-  - Info
-  - FastFood
   - Platform
   - TrainStop
   - Stairs
   - TrainCenter
+  - Interactable
+  - Return
   layers:
   - Default
   - TransparentFX
