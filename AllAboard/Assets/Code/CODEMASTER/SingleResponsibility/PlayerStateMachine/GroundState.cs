@@ -47,7 +47,6 @@ public class GroundState : IPlayerState
 
 	public void OnTriggerEnter(Collider other) 
 	{
-		Debug.Log("TriggerPlatform");
 		if (other.CompareTag("Platform")) Context.SetState(Context.trainState);
 	}
 
