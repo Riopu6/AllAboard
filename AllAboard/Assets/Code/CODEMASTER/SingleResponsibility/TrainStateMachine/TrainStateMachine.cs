@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TrainStateMachine : MonoBehaviour
 {
 	public Animator Animator;
 	public MovePoints MovePoints;
+	public List<GameObject> LinkedObjects;
 	public Rigidbody Rig { get; set; }
 
 	#region StateCollections
@@ -26,7 +28,7 @@ public class TrainStateMachine : MonoBehaviour
 	private void Start()
 	{
 		trainEnter = new TrainEnter(this, TrainEnterCollection);
-		trainOpenDoors = new TrainOpenDoors(this, TrainOpenDoorsCollection);
+		trainOpenDoors = new TrainOpenDoors(this, TrainOpenDoorsCollection, LinkedObjects);
 		trainExit = new TrainExit(this, TrainExitCollection);
 		trainReset = new TrainReset(this);
 
