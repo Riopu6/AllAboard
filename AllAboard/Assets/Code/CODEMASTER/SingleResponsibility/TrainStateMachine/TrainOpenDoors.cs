@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Unity.Extentions;
 using UnityEngine;
@@ -7,10 +6,12 @@ using UnityEngine;
 public class TrainOpenDoors : ITrainState
 {
 	private readonly TrainStateMachine Context;
-	private StateCollection collection;
 	private readonly List<GameObject> linkedObjects;
-	private Timer timer;
+	private StateCollection collection;
+
 	private TriggerCount triggerCount;
+	private float timePassed;
+	private float sum;
 
 	public TrainOpenDoors(TrainStateMachine context, StateCollection collection, List<GameObject> linkedObjects)
 	{
@@ -20,21 +21,36 @@ public class TrainOpenDoors : ITrainState
 	}
 	public void EnterState()
 	{
-		timer = new Timer(Context);
 		Context.PlayAnimation(collection.AnimationName);
 		triggerCount = ClosestObject().GetComponent<TriggerCount>();
 	}
-
-	private GameObject ClosestObject() => linkedObjects.OrderBy(x => x.transform.position.AproxMatch(Context.transform.position)).FirstOrDefault();
-
 	public void RunState()
 	{
-		timer.DelayForSecondsOnce(Constants.TrainStopTime, () =>
+		timePassed += Time.deltaTime;
+		timePassed.Print();
+		sum += Time.deltaTime;
+		if (triggerCount.HasIncremented)
 		{
-			triggerCount.IsEmpty().Print();
-			timer.DelayUntilOnce(
-				() => triggerCount.IsEmpty(), 
-				() => Context.SetState(Context.trainExit));
-		});
+			timePassed = Mathf.Clamp(timePassed - 1, -1, 6);
+			triggerCount.ResetIncAndDec();
+		}
+
+
+		
+		if (timePassed >= Constants.TrainStopTime)
+		{
+
+			if (triggerCount.IsEmpty())
+			{
+				sum.Print("<color=red>This is a sum</color>");
+				timePassed = 0;
+				sum = 0;
+				Context.SetState(Context.trainExit);
+			}
+		}
+
 	}
+	private GameObject ClosestObject() => linkedObjects.OrderBy(x => Vector3.Distance(x.transform.position, Context.transform.position))
+		.FirstOrDefault();
+
 }

@@ -15,11 +15,7 @@ public class TrainReset : ITrainState
 
 	public void RunState()
 	{
-		timer.DelayForSecondsOnce(Constants.TrainResetTime, () =>
-		{
-			Context.SetState(Context.trainEnter);
-		}
-		);
+		Context.SetState(Context.trainEnter);
 	}
 }
 

@@ -18,7 +18,6 @@ public class UserInteraction : MonoBehaviour
 
 	private void Update()
 	{
-		print(SelectedCollider);
 		if (Input.GetMouseButton(0))
 		{
 			Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);

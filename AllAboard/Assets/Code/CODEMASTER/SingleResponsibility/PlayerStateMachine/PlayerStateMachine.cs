@@ -40,7 +40,9 @@ public class PlayerStateMachine : MonoBehaviour
 	private void FixedUpdate() => currentState?.RunState();
 	private void OnCollisionEnter(Collision collision) => currentState.OnCollisionEnter(collision);
 	private void OnTriggerEnter(Collider other) => currentState.OnTriggerEnter(other);
-	
+
+	private void OnDisable() => PassengerSpawner.OnDestroyedPassenger.LocalInvoke();
+
 	#endregion
 
 	#region Player State Machine

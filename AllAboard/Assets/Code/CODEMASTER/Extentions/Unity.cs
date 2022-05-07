@@ -109,6 +109,7 @@ namespace Unity
 			public static void Print(this object toPrint, string seperator, params object[] extraInfo) => Debug.Log(toPrint + seperator + string.Join(seperator, extraInfo));
 		}
 
+
 		public class Timer
 		{
 			private static MonoBehaviour monoInstance;
@@ -118,7 +119,9 @@ namespace Unity
 			{
 				monoInstance = monoBehaviour;
 			}
+
 			public void DelayForSecondsOnce(float seconds, System.Action action) => monoInstance.StartCoroutine(WaitForSeconds(seconds, action));
+			public void DelayForSecondsOnce(float seconds, System.Func<IEnumerator> func) => monoInstance.StartCoroutine(WaitForSeconds(seconds, func));
 
 			public void DelayUntilOnce(System.Func<bool> func, System.Action action) => monoInstance.StartCoroutine(WaitUntil(func, action));
 
@@ -136,6 +139,11 @@ namespace Unity
 
 			#region IEnumerators
 			private IEnumerator WaitForSeconds(float seconds, System.Action action)
+			{
+				yield return new WaitForSeconds(seconds);
+				action();
+			}
+			private IEnumerator WaitForSeconds(float seconds, System.Func<IEnumerator> action)
 			{
 				yield return new WaitForSeconds(seconds);
 				action();

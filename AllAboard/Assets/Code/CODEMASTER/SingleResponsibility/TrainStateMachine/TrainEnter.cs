@@ -7,6 +7,7 @@ public class TrainEnter : ITrainState
 	private readonly TrainStateMachine Context;
 	private StateCollection collection;
 	private Vector3 StopPosition;
+	private Timer timer;
 
 	public TrainEnter(TrainStateMachine context, StateCollection collection)
 	{
@@ -21,18 +22,23 @@ public class TrainEnter : ITrainState
 		StopPosition = GetRandomPlatform();
 
 		Context.PlayAnimation(collection.AnimationName);
+		timer = new Timer(Context);
 
 	}
 
 	public void RunState()
 	{
-		Move();
-		if (Context.Rig.position.AproxMatch(StopPosition))
-		{ 
-			Context.Rig.position = StopPosition;
-			Context.SetState(Context.trainOpenDoors);
-		}
+		timer.DelayForSecondsOnce(Constants.TrainResetTime, () =>
+		{
+			Move();
+			if (Context.Rig.position.AproxMatch(StopPosition))
+			{
+				Context.Rig.position = StopPosition;
+				Context.SetState(Context.trainOpenDoors);
+			}
+		});
 	}
+
 
 	private void Move()
 	{
