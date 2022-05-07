@@ -32,10 +32,7 @@ public class TrainExit : ITrainState
 
 	}
 
-	private bool AnimationPlaying()
-	{
-		return Context.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1;
-	}
+	private bool AnimationPlaying() => Context.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1;
 	private void Move()
 	{
 		Vector3 startPosition = Context.transform.position;

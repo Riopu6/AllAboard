@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Unity.Extentions;
 using UnityEngine;
@@ -8,11 +7,12 @@ public class PassengerSpawner : MonoBehaviour
 	[SerializeField] List<GameObject> Prefabs = new List<GameObject>();
 	[SerializeField] List<Transform> Spawns = new List<Transform>();
 
+	public static GameEvent OnDestroyedPassenger = new GameEvent();
 	private readonly int maxCount = Constants.MaxPassengers;
 	private int currentCount = 0;
 	private Timer timer;
 
-	private void OnEnable() => GameEvent.GlobalEvent += DecrementCurrentCount;
+	private void OnEnable() => OnDestroyedPassenger.LocalEvent += DecrementCurrentCount;
 
 	private void Start() => timer = new Timer(this);
 
@@ -24,7 +24,7 @@ public class PassengerSpawner : MonoBehaviour
 		}
 	}
 
-	private void OnDisable() => GameEvent.GlobalEvent -= DecrementCurrentCount;
+	private void OnDisable() => OnDestroyedPassenger.LocalEvent -= DecrementCurrentCount;
 
 	private void DecrementCurrentCount() => currentCount--;
 }
