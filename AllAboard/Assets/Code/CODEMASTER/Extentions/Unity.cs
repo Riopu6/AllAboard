@@ -11,6 +11,22 @@ namespace Unity
 		{
 			public static Vector3 GetRandomVector3(float min = float.MinValue, float max = float.MaxValue) => new Vector3(Random.Range(min, max), Random.Range(min, max), Random.Range(min, max));
 			public static T GetRandomElement<T>(this IEnumerable<T> list) => list.Count() == 0 ? default : list.ElementAt(Random.Range(0, list.Count()));
+			public static List<T> GetRandomElements<T>(this IEnumerable<T> list, int takeNum)
+			{
+				if (list.Count() == 0) return default;
+				
+				var returnList = new List<T>();
+				takeNum = Mathf.Clamp(takeNum, 0, list.Count());
+
+				for (int i = 0; i < takeNum; i++)
+				{
+					var randElement = list.ElementAt(Random.Range(0, list.Count()));
+					if (!returnList.Contains(randElement))
+						returnList.Add(randElement);
+					else i--;
+				}
+				return returnList;
+			}
 		}
 
 
