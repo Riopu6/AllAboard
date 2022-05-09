@@ -30,7 +30,6 @@ public class TriggerCount : MonoBehaviour
 	{
 		if(other.CompareTag("Passenger"))
 			IncrementCount();
-		$"incremented {Count}".Print("<color=orange>This is a Count</color>");
 	}
 
 	private void OnTriggerExit(Collider other)
