@@ -27,22 +27,20 @@ public class TrainOpenDoors : ITrainState
 	public void RunState()
 	{
 		timePassed += Time.deltaTime;
-		timePassed.Print();
+
 		sum += Time.deltaTime;
+
 		if (triggerCount.HasIncremented)
 		{
 			timePassed = Mathf.Clamp(timePassed - 1, -1, 6);
 			triggerCount.ResetIncAndDec();
 		}
-
-
 		
 		if (timePassed >= Constants.TrainStopTime)
 		{
 
 			if (triggerCount.IsEmpty())
 			{
-				sum.Print("<color=red>This is a sum</color>");
 				timePassed = 0;
 				sum = 0;
 				Context.SetState(Context.trainExit);
