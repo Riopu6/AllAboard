@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,7 +20,10 @@ public class DisplayManager : MonoBehaviour
 
 	public static void ShowImage(Sprite sprite)
 	{
-		if (displayImage.sprite == null) displayImage.enabled = false;
+		if (displayImage.sprite == null)
+		{
+			displayImage.enabled = false;
+		}
 		else
 		{
 			displayImage.enabled = true;

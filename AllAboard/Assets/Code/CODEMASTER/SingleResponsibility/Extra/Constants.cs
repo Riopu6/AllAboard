@@ -7,4 +7,9 @@
 	public const float TrainMoveSpeed = 7f;
 	public const float TrainStopTime = 5f;
 	public const float TrainResetTime = 2f;
+	public const int LimitShop = 5;
+	public const int LimitInfo = 1;
+	public const int LimitCoffeeShop = 5;
+	public const int LimitFastFood = 1;
+	public const float NearInteraction = 0.2f;
 }
