@@ -22,10 +22,14 @@ public class FallingState : IPlayerState
 
 	public void OnTriggerEnter(Collider other)
 	{
-
 		if (other.CompareTag("Platform"))
 		{
 			Context.SetState(Context.trainState);
+		}
+		if (other.CompareTag("Interactable"))
+		{
+			Context.SetState(Context.interactState);
+			Context.interactState.OnTriggerEnter(other);
 		}
 	}
 

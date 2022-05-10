@@ -18,6 +18,7 @@ public class PlayerStateMachine : MonoBehaviour
 	public DragState dragState;
 	public FallingState fallingState;
 	public TrainState trainState;
+	public InteractState interactState;
 
 	public Rigidbody Rigidbody { get; private set; }
 	public Collider Collider { get; private set; }
@@ -31,6 +32,7 @@ public class PlayerStateMachine : MonoBehaviour
 		dragState = new DragState(this, dragCollection);
 		fallingState = new FallingState(this, fallingCollection);
 		trainState = new TrainState(this, trainCollection);
+		interactState = new InteractState(this);
 
 		SetState(groundState);
 
