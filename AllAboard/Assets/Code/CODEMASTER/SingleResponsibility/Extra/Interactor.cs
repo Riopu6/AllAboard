@@ -30,7 +30,9 @@ public class Interactor : MonoBehaviour, Interactable
 
 		if (nextTaskNum == 1)
 		{
+			Context.PlayAnimation("Walking");
 			Move(Context, firstPosition);
+			Rotate(Context, firstPosition);
 			if (Context.transform.position.ExcludeAxis(SnapAxis.Y).AproxMatch(firstPosition.ExcludeAxis(SnapAxis.Y), Constants.NearInteraction))
 			{
 				NextTask();
@@ -42,6 +44,7 @@ public class Interactor : MonoBehaviour, Interactable
 			if (randomPlace == Vector3.zero) NextTask();
 
 			Move(Context, randomPlace);
+			Rotate(Context, randomPlace);
 			if(Context.transform.position.ExcludeAxis(SnapAxis.Y).AproxMatch(randomPlace.ExcludeAxis(SnapAxis.Y), Constants.NearInteraction))
 			{
 				NextTask();
@@ -53,7 +56,7 @@ public class Interactor : MonoBehaviour, Interactable
 			if (!string.IsNullOrWhiteSpace(randomAnimationClipName))
 				Context.PlayAnimation(randomAnimationClipName);
 
-			if (!AnimationPlaying(Context))
+			if (!AnimationPlaying(Context) && Context.Animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == randomAnimationClipName)
 			{
 				NextTask();
 			}
@@ -62,7 +65,9 @@ public class Interactor : MonoBehaviour, Interactable
 
 		if(nextTaskNum == 4)
 		{
+			Context.PlayAnimation("Walking");
 			Move(Context, firstPosition);
+			Rotate(Context, firstPosition);
 			if (Context.transform.position.ExcludeAxis(SnapAxis.Y).AproxMatch(firstPosition.ExcludeAxis(SnapAxis.Y)))
 			{
 				finishedInteracting = true;
@@ -73,6 +78,12 @@ public class Interactor : MonoBehaviour, Interactable
 		return finishedInteracting;
 	}
 	private void Move(PlayerStateMachine Context, Vector3 target) => Context.Rigidbody.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
+
+	private void Rotate(PlayerStateMachine Context, Vector3 target)
+	{
+		Vector3 targetDirection = Vector3Ext.GetDirectionNormalized(Context.transform.position, target).ExcludeAxis(SnapAxis.Y);
+		Context.transform.rotation = Quaternion.Lerp(Context.transform.rotation, Quaternion.LookRotation(targetDirection), Time.deltaTime * Constants.PassengerRotationSpeed);
+	}
 
 	private void NextTask() => nextTaskNum = Mathf.Clamp(nextTaskNum + 1, 0, Constants.LimitShop);
 

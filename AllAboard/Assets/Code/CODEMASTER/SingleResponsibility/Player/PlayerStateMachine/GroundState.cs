@@ -50,10 +50,10 @@ public class GroundState : IPlayerState
 		if (other.CompareTag("Platform")) Context.SetState(Context.trainState);
 	}
 
-	private void Move(Vector3 target)
-	{
-		Context.Rigidbody.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
-	}
+	private void Move(Vector3 target) => Context.Rigidbody.position = Vector3.MoveTowards(Context.transform.position, target, Time.deltaTime * Constants.PassengerMovingSpeed);
+
+	public void SetSelector(GameObject MoveArea) => selector = new Selector(MoveArea);
+	public void SetSelector(Vector3 Point) => selector = new Selector(Point);
 
 	private void Rotate(Vector3 target)
 	{
