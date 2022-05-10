@@ -33,6 +33,7 @@ public class InteractState : IPlayerState
 		if (hasFinishedInteracting)
 		{
 			Context.SetState(Context.groundState);
+			Context.groundState.SetSelector(Vector3.one);
 		}
 	}
 }

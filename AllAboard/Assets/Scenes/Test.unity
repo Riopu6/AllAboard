@@ -349,8 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   otherTriggerCount: {fileID: 0}
   targets: []
-  animationClips:
-  - {fileID: 7400000, guid: ae6ae57bff22be046bc9685c3991d1f2, type: 2}
+  animationClips: []
 --- !u!1 &1222306848
 GameObject:
   m_ObjectHideFlags: 0

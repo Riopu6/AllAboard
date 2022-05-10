@@ -22,6 +22,7 @@ public class PlayerStateMachine : MonoBehaviour
 
 	public Rigidbody Rigidbody { get; private set; }
 	public Collider Collider { get; private set; }
+	public string CurrentAnimationPlaying { get; private set; }
 
 
 	#region Unity Callbacks
@@ -54,7 +55,12 @@ public class PlayerStateMachine : MonoBehaviour
 		currentState = state;
 		currentState.EnterState();
 	}
-	public void PlayAnimation(string animation) => Animator.Play(animation);
+	public void PlayAnimation(string animation)
+	{
+		CurrentAnimationPlaying = animation;
+		Animator.Play(animation);
+	}
+
 	public void DestroyObject() => Destroy(gameObject);
 
 	#endregion
