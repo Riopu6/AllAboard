@@ -561,6 +561,7 @@ MonoBehaviour:
     Stop1: {fileID: 0}
     Stop2: {fileID: 0}
     End: {fileID: 0}
+  LinkedObjects: []
   TrainEnterCollection:
     audioClip: {fileID: 0}
     animation: {fileID: 7400000, guid: 15584515082e4584ebf521bf7281550b, type: 2}
