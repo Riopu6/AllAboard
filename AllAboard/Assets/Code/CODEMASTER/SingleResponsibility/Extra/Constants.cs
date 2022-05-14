@@ -1,4 +1,5 @@
-﻿public static class Constants
+﻿using UnityEngine;
+public static class Constants
 {
 	public const int MaxPassengers = 20;
 	public const float PassengerMovingSpeed = 5f;
@@ -7,9 +8,9 @@
 	public const float TrainMoveSpeed = 7f;
 	public const float TrainStopTime = 5f;
 	public const float TrainResetTime = 2f;
-	public const int LimitShop = 5;
-	public const int LimitInfo = 1;
-	public const int LimitCoffeeShop = 5;
-	public const int LimitFastFood = 1;
+	public const int ShopCapacity = 7;
+	public const int InfoCapacity = 1;
+	public const int CoffeeShopCapacity = 7;
+	public const int FastFoodCapacity = 1;
 	public const float NearInteraction = 0.2f;
 }

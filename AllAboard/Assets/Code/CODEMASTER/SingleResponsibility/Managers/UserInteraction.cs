@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Unity.Extentions;
+using UnityEngine;
 
 public class UserInteraction : MonoBehaviour
 {
@@ -8,7 +11,8 @@ public class UserInteraction : MonoBehaviour
 	public static Collider SelectedCollider { get; private set; }
 	private static bool isSelectedCollider;
 
-	[SerializeField] LayerMask ignoreRaycast;
+	[SerializeField] LayerMask ignoreLayerMask;
+	[SerializeField] LayerMask exceptLayerMask;
 
 	private Camera mainCamera;
 	private void Start()
@@ -24,7 +28,8 @@ public class UserInteraction : MonoBehaviour
 
 			ScreenOriginPosition = ray.origin;
 
-			if (Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity, ~ignoreRaycast)) // hit behind Passenger
+
+			if (Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity, ~ignoreLayerMask)) // hit behind Passenger
 			{
 				ScreenToWorldTouchPosition = hitInfo.point;
 				Debug.DrawLine(ray.origin, ScreenToWorldTouchPosition, Color.yellow);
