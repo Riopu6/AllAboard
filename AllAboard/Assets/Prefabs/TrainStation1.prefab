@@ -54,7 +54,7 @@ GameObject:
   m_Component:
   - component: {fileID: 49708823}
   - component: {fileID: 49708824}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_Target_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111049557}
   - component: {fileID: 111049558}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_Target_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432148853}
   - component: {fileID: 432148854}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_Target_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   - component: {fileID: 682170691}
   - component: {fileID: 682170692}
   - component: {fileID: 1444252431}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -664,7 +664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 707813281}
   - component: {fileID: 707813283}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_DoorCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,7 +708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 740828779}
   - component: {fileID: 740828780}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_Target_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 838908658}
   - component: {fileID: 838908659}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_Target_7 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +796,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921650290}
   - component: {fileID: 921650291}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_Target_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -840,7 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 946039865}
   - component: {fileID: 946039866}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_Target_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -959,7 +959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1248300875}
   - component: {fileID: 1248300877}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_DoorCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,9 +1144,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1450047501}
   - component: {fileID: 1450047502}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_PassTheDoor
-  m_TagString: Interactable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1357,7 +1357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1622106928}
   - component: {fileID: 1622106929}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Caffee_Trigger_Target_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1751,7 +1751,8 @@ GameObject:
   - component: {fileID: 2998749056134194799}
   - component: {fileID: 3996956596540244748}
   - component: {fileID: 6887517567900512357}
-  m_Layer: 0
+  - component: {fileID: 1874716084}
+  m_Layer: 6
   m_Name: BackWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1825,6 +1826,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1874716084
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446800652221779559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3490617, y: 0.000000068917856, z: 0.48159516}
+  m_Center: {x: -0.029304627, y: -0.004815928, z: 0.004581667}
 --- !u!1 &555671559187399325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1847737398864807497}
   - component: {fileID: 6316468603833698616}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_Target_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1923,7 +1937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5369964471310251902}
   - component: {fileID: 5393303444773757458}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_Target_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2062,7 +2076,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ed280b0fdae38624bb80596fb4639cca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2367,7 +2381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3979891324811970452}
   - component: {fileID: 3246012026792234681}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_Target_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3354,7 +3368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3186982354885938961}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.051188886, y: 0.021745965, z: 0.00038541076}
+  m_LocalPosition: {x: -0.0393, y: 0.0183, z: 0.0004}
   m_LocalScale: {x: 1.2308822, y: 1.2308823, z: 1.2308823}
   m_Children: []
   m_Father: {fileID: 4048416497693430847}
@@ -3387,7 +3401,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ed280b0fdae38624bb80596fb4639cca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4833,7 +4847,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1954381743027082525}
   - component: {fileID: 1268089159860957186}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_Target_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5012,9 +5026,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1935710838117895646}
   - component: {fileID: 3277409627341493720}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_PassTheDoor
-  m_TagString: Interactable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5342,7 +5356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6889705248105371371}
   - component: {fileID: 1673623242366153597}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_Target_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5797,7 +5811,7 @@ GameObject:
   - component: {fileID: 8925485448358146688}
   m_Layer: 0
   m_Name: Caffee_Trigger_Inside
-  m_TagString: Interactable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5810,7 +5824,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7022441603287501983}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.08961831, y: 0.044341598, z: -1.4295245}
+  m_LocalPosition: {x: 0.08961831, y: 0.245, z: -1.4295245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1886899103}
@@ -5828,7 +5842,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.2252647, y: 1, z: 2.2586107}
-  m_Center: {x: -0.044918187, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8925485448358146688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6057,7 +6071,7 @@ GameObject:
   - component: {fileID: 2484401782580060096}
   - component: {fileID: 4874358146154130771}
   - component: {fileID: 427286024}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_Inside
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6072,7 +6086,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7341014229347513443}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16060342, y: 0.20564237, z: -1.4425452}
+  m_LocalPosition: {x: 0.16060342, y: 0.26, z: -1.4425452}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 682170691}
@@ -6089,8 +6103,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.73754257, y: 1, z: 2.258611}
-  m_Center: {x: -0.046377473, y: 0, z: 0}
+  m_Size: {x: 0.73754257, y: 1, z: 2.2822168}
+  m_Center: {x: -0.046377473, y: 0, z: 0.011803018}
 --- !u!114 &427286024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6198,7 +6212,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ed280b0fdae38624bb80596fb4639cca, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6598,7 +6612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6768362813309112780}
   - component: {fileID: 1839505596575363317}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_Target_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7127,7 +7141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1704638500511614908}
   - component: {fileID: 7458300404417517830}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Store_Trigger_Target_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7674,21 +7688,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
---- !u!4 &1721619557825231131 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4294316417039139720, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
-  m_PrefabInstance: {fileID: 3205456665603652243}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2948682356511778917 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 330947641308222198, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
-  m_PrefabInstance: {fileID: 3205456665603652243}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &127938822400007351 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3295111506463876644, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
-  m_PrefabInstance: {fileID: 3205456665603652243}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9077720004977788300 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5874554171853520671, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
@@ -7702,6 +7701,21 @@ Transform:
 --- !u!4 &2554301976924034215 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1084986838513626676, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
+  m_PrefabInstance: {fileID: 3205456665603652243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &127938822400007351 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3295111506463876644, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
+  m_PrefabInstance: {fileID: 3205456665603652243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1721619557825231131 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4294316417039139720, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
+  m_PrefabInstance: {fileID: 3205456665603652243}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2948682356511778917 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 330947641308222198, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
   m_PrefabInstance: {fileID: 3205456665603652243}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7812976736743641206
@@ -7801,24 +7815,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
---- !u!4 &1352864208585087174 stripped
+--- !u!4 &6338041273005495294 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 9127409024247204016, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
-  m_PrefabInstance: {fileID: 7812976736743641206}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &7161815452353232450 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1084986838513626676, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4294316417039139720, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
   m_PrefabInstance: {fileID: 7812976736743641206}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7564507860681409152 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 330947641308222198, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
-  m_PrefabInstance: {fileID: 7812976736743641206}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6338041273005495294 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4294316417039139720, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
   m_PrefabInstance: {fileID: 7812976736743641206}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4505161006909981024 stripped
@@ -7829,5 +7833,15 @@ Transform:
 --- !u!4 &7667140868163296963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 435269222122000053, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
+  m_PrefabInstance: {fileID: 7812976736743641206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1352864208585087174 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9127409024247204016, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
+  m_PrefabInstance: {fileID: 7812976736743641206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7161815452353232450 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1084986838513626676, guid: 3cc33c6f2a384c94a84ccec92c40b4d3, type: 3}
   m_PrefabInstance: {fileID: 7812976736743641206}
   m_PrefabAsset: {fileID: 0}
