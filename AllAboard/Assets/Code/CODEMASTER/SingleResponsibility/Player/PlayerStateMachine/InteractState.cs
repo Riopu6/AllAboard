@@ -8,6 +8,7 @@ public class InteractState : IPlayerState
 	private readonly PlayerStateMachine Context;
 	private InteractInfo interactableInfo;
 	private bool finishedInteracting;
+	private int ignoreSelf;
 	private int nextTaskNum;
 	private bool getNewInfo;
 
@@ -59,9 +60,12 @@ public class InteractState : IPlayerState
 	public bool Interact(InteractInfo info)
 	{
 		finishedInteracting = false;
+		ignoreSelf = Context.gameObject.layer;
 		if (getNewInfo)
 		{
 			getNewInfo = false;
+
+			Physics.IgnoreLayerCollision(ignoreSelf, ignoreSelf, true);
 
 			info.EntrancePosition = info.EntranceTransform == null ? Vector3.zero : info.EntranceTransform.position;
 
@@ -137,6 +141,8 @@ public class InteractState : IPlayerState
 					finishedInteracting = true;
 					nextTaskNum = 1;
 					getNewInfo = true;
+					Physics.IgnoreLayerCollision(ignoreSelf, ignoreSelf, false);
+
 				}
 			);
 		}

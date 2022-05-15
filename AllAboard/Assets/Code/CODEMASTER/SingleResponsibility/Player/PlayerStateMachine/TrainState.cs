@@ -20,14 +20,17 @@ public class TrainState : IPlayerState
 	public void EnterState() => Context.PlayAnimation(collection.AnimationName);
 
 	public void RunState()
-	{
+	{ 
+
 		Move(GetTrainPoint());
 		Rotate(GetTrainPoint());
 		
+
 		if (UserInteraction.SelectedCollider == Context.Collider)
 		{
 			Context.SetState(Context.dragState);
 		}
+
 	}
 
 	private Vector3 GetTrainPoint()
@@ -40,7 +43,14 @@ public class TrainState : IPlayerState
 		return TrainPathPoints[index];
 	}
 
-	public void OnCollisionEnter(Collision collision) { }
+	public void OnCollisionEnter(Collision collision)
+	{
+		if((GetTrainPoint() - Context.transform.position).magnitude > Constants.TrainRange)
+		{
+			Context.SetState(Context.groundState);
+			Context.groundState.SetSelector(collision.gameObject);
+		}
+	}
 
 	public void OnTriggerEnter(Collider other) { if (other.CompareTag("TrainCenter")) { Context.DestroyObject(); } }
 

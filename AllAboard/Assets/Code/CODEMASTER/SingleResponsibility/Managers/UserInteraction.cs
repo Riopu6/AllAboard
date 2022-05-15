@@ -12,7 +12,6 @@ public class UserInteraction : MonoBehaviour
 	private static bool isSelectedCollider;
 
 	[SerializeField] LayerMask ignoreLayerMask;
-	[SerializeField] LayerMask exceptLayerMask;
 
 	private Camera mainCamera;
 	private void Start()
