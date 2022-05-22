@@ -4,6 +4,8 @@ using UnityEngine;
 public class TriggerCount : MonoBehaviour
 {
 	public Collider ObjectCollider { get; set; }
+	public Collider LastEntered { get; set; }
+	public Collider LastExited { get; set; }
 	public readonly List<Collider> containedColliders = new List<Collider>();
 	public int Count { get; private set; } = 0;
 
@@ -14,6 +16,7 @@ public class TriggerCount : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+		LastEntered = other;
 		if (!containedColliders.Contains(other)) containedColliders.Add(other);
 
 		if (other.CompareTag("Passenger"))
@@ -24,7 +27,8 @@ public class TriggerCount : MonoBehaviour
 
 	private void OnTriggerExit(Collider other)
 	{
-		if (containedColliders.Contains(other)) containedColliders.Remove(other);
+		LastExited = other;
+		containedColliders.Remove(other);
 
 		if (other.CompareTag("Passenger"))
 		{

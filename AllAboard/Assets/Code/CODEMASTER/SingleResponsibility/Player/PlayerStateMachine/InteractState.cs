@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using Unity.Extentions;
 using UnityEngine;
 
@@ -32,6 +31,12 @@ public class InteractState : IPlayerState
 		if (other.CompareTag("Interactable"))
 		{
 			interactableInfo = other.GetComponent<InteractInfo>();
+			//if (interactableInfo != null) Requests.OnRequestFinished.LocalInvoke();
+			if(interactableInfo.otherTriggerCount.Count >= interactableInfo.GetMaxNumberOfPassengers())
+			{
+				//SimpleDisplayManager.OnFullInteraction.LocalInvoke();
+				SetToGroundState();
+			}
 		}
 	}
 
@@ -61,6 +66,7 @@ public class InteractState : IPlayerState
 	{
 		finishedInteracting = false;
 		ignoreSelf = Context.gameObject.layer;
+
 		if (getNewInfo)
 		{
 			getNewInfo = false;
@@ -93,14 +99,10 @@ public class InteractState : IPlayerState
 
 		if (nextTaskNum == 3)
 		{
-			if (info.GetAssignedPosition(Context.Collider) == Vector3.zero)
-			{
-				NextTask();
-			}
-			else
-			{
+			
+			
 				MoveTowards(Context, info.GetAssignedPosition(Context.Collider), NextTask);
-			}
+			
 		}
 
 		if (nextTaskNum == 4)
@@ -132,22 +134,27 @@ public class InteractState : IPlayerState
 
 		if (nextTaskNum == 6)
 		{
-			Context.PlayAnimation("Walking");
-			MoveTowards(
-				Context,
-				info.ColliderCenter,
-				() =>
-				{
-					finishedInteracting = true;
-					nextTaskNum = 1;
-					getNewInfo = true;
-					Physics.IgnoreLayerCollision(ignoreSelf, ignoreSelf, false);
-
-				}
-			);
+			Reset(info);
 		}
 
 		return finishedInteracting;
+	}
+
+	private void Reset(InteractInfo info)
+	{
+		Context.PlayAnimation("Walking");
+		MoveTowards(
+			Context,
+			info.ColliderCenter,
+			() =>
+			{
+				finishedInteracting = true;
+				nextTaskNum = 1;
+				getNewInfo = true;
+				Physics.IgnoreLayerCollision(ignoreSelf, ignoreSelf, false);
+
+			}
+		);
 	}
 
 	private void MoveTowards(PlayerStateMachine Context, Vector3 towards, Action executeAction, float marginOfError = 0.1f)

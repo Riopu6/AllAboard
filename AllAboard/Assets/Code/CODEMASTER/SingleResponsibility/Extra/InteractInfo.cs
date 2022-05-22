@@ -5,6 +5,7 @@ public class InteractInfo : MonoBehaviour
 {
 	[Space]
 	public TriggerCount otherTriggerCount;
+	[SerializeField] int maxNumberOfPassengers;
 	[Space]
 	[Space]
 	[Space]
@@ -25,9 +26,12 @@ public class InteractInfo : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("Passenger") && !asignRandomTarget.ContainsKey(other))
+		if (otherTriggerCount.Count < maxNumberOfPassengers)
 		{
-			asignRandomTarget.Add(other, targets[otherTriggerCount.Count].position);
+			if (other.CompareTag("Passenger") && !asignRandomTarget.ContainsKey(other))
+			{
+				asignRandomTarget.Add(other, targets[otherTriggerCount.Count].position);
+			}
 		}
 	}
 
@@ -35,11 +39,18 @@ public class InteractInfo : MonoBehaviour
 	{
 		if (otherTriggerCount.HasDecremented)
 		{
-			asignRandomTarget.Remove(other);
+			asignRandomTarget.Remove(otherTriggerCount.LastExited);
 			otherTriggerCount.ResetIncAndDec();
 		}
 	}
 
-	public Vector3 GetAssignedPosition(Collider col) => asignRandomTarget[col];
+	public Vector3 GetAssignedPosition(Collider col)
+	{
+		if(asignRandomTarget.ContainsKey(col))
+			return asignRandomTarget[col];
+		return Vector3.negativeInfinity;
+	}
 
+	public int GetMaxNumberOfPassengers() => maxNumberOfPassengers;
+	public bool isFull() => otherTriggerCount.Count >= maxNumberOfPassengers;
 }
