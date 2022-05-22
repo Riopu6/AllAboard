@@ -1,7 +1,4 @@
-﻿using Unity.Extentions;
-using UnityEngine;
-
-public class TrainReset : ITrainState
+﻿public class TrainReset : ITrainState
 {
 	private readonly TrainStateMachine Context;
 	public TrainReset(TrainStateMachine context) => Context = context;

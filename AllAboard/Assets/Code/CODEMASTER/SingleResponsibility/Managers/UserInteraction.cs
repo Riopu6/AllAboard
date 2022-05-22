@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Unity.Extentions;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class UserInteraction : MonoBehaviour
 {
