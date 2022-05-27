@@ -14,4 +14,5 @@ public static class Constants
 	public const int CoffeeShopCapacity = 7;
 	public const int FastFoodCapacity = 1;
 	public const float NearInteraction = 0.4f;
+	public const int MaxRequests = 2;
 }
