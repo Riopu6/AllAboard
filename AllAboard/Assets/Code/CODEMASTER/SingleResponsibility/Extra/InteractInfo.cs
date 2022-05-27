@@ -19,6 +19,9 @@ public class InteractInfo : MonoBehaviour
 	public string RandomAnimationClipName { get; set; }
 	public Vector3 EntrancePosition { get; set; }
 
+	public bool SuccessfullyEntered { get; set; }
+	public bool SuccessfullyExited { get; set; }
+
 	private void Start()
 	{
 		ColliderCenter = GetComponent<Collider>().transform.position;
@@ -30,8 +33,13 @@ public class InteractInfo : MonoBehaviour
 		{
 			if (other.CompareTag("Passenger") && !asignRandomTarget.ContainsKey(other))
 			{
+				SuccessfullyEntered = true;
 				asignRandomTarget.Add(other, targets[otherTriggerCount.Count].position);
 			}
+		}
+		else
+		{
+			SuccessfullyEntered = false;
 		}
 	}
 
@@ -39,8 +47,13 @@ public class InteractInfo : MonoBehaviour
 	{
 		if (otherTriggerCount.HasDecremented)
 		{
+			SuccessfullyExited = true;
 			asignRandomTarget.Remove(otherTriggerCount.LastExited);
 			otherTriggerCount.ResetIncAndDec();
+		}
+		else
+		{
+			SuccessfullyExited = false;
 		}
 	}
 

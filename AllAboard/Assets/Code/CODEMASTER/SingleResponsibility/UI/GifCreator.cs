@@ -12,7 +12,7 @@ public class GifCreator : MonoBehaviour
 	private int index = 0;
 
 	[SerializeField] List<Sprite> Sprites;
-	[SerializeField, Range(0, 10)] float durationSeconds = 3;
+	[SerializeField, Range(0, 10)] float durationSeconds;
 
 	private void Start()
 	{
@@ -22,7 +22,7 @@ public class GifCreator : MonoBehaviour
 
 	private void Update()
 	{
-		timer.DelayForSecondsRepeat(3, NextImage);
+		timer.DelayForSecondsRepeat(durationSeconds, NextImage);
 	}
 
 	private void NextImage()
