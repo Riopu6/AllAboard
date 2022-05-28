@@ -16,6 +16,7 @@ public abstract class Display : MonoBehaviour
 	public virtual void Update()
 	{
 		transform.LookAt(toLookAt);
+		transform.Rotate(Vector3.up, 180);
 	}
 
 }
