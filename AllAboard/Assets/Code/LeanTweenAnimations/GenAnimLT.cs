@@ -67,6 +67,7 @@ public class GenAnimLT : MonoBehaviour
 
 		_tweenObject.setDelay(delay);
 		_tweenObject.setEase(easeType);
+		_tweenObject.setIgnoreTimeScale(true);
 
 		if (loop)
 		{
@@ -76,6 +77,8 @@ public class GenAnimLT : MonoBehaviour
 		{
 			_tweenObject.setLoopPingPong();
 		}
+
+
 	}
 
 	public void Fade()

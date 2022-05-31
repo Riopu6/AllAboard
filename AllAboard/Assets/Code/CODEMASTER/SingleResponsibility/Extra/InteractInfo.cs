@@ -37,10 +37,6 @@ public class InteractInfo : MonoBehaviour
 				asignRandomTarget.Add(other, targets[otherTriggerCount.Count].position);
 			}
 		}
-		else
-		{
-			SuccessfullyEntered = false;
-		}
 	}
 
 	private void OnTriggerExit(Collider other)
@@ -48,6 +44,8 @@ public class InteractInfo : MonoBehaviour
 		if (otherTriggerCount.HasDecremented)
 		{
 			SuccessfullyExited = true;
+			SuccessfullyEntered = false;
+			
 			asignRandomTarget.Remove(otherTriggerCount.LastExited);
 			otherTriggerCount.ResetIncAndDec();
 		}
@@ -59,8 +57,11 @@ public class InteractInfo : MonoBehaviour
 
 	public Vector3 GetAssignedPosition(Collider col)
 	{
-		if(asignRandomTarget.ContainsKey(col))
+		if (asignRandomTarget.ContainsKey(col))
+		{
 			return asignRandomTarget[col];
+		}
+
 		return Vector3.negativeInfinity;
 	}
 

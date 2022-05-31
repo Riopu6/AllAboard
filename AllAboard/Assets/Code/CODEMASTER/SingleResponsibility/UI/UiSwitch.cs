@@ -25,16 +25,16 @@ public class UiSwitch : BoolOperation
 
 	private void Switch(bool value)
 	{
-		Animation(value);
+		//Animation(value);
 		displayImage.enabled = value;
 	}
 
-	private void Animation(bool run)
-	{
-		if (run)
-		{
-			LeanTween.moveX(displayImage.gameObject, imagePosition.x + 0.5f, 0.5f).setEaseShake();
-		}
-	}
+	//private void Animation(bool run)
+	//{
+	//	if (run)
+	//	{
+	//		LeanTween.moveX(displayImage.gameObject, imagePosition.x + 0.5f, 0.5f).setEaseShake();
+	//	}
+	//}
 }
 

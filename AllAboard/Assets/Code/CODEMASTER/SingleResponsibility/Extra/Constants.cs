@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 public static class Constants
 {
-	public const int MaxPassengers = 20;
+	public const int MaxPassengers = 12;
 	public const float PassengerMovingSpeed = 5f;
 	public const float PassengerRotationSpeed = 3f;
 	public const float NearATrain = 5f;
