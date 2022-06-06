@@ -501,13 +501,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Star Desc
+  m_Text: Put Passenger in Train
 --- !u!222 &125416583
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2162,13 +2162,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Star Desc
+  m_Text: Start The game
 --- !u!222 &1017916954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2441,13 +2441,13 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Star Desc
+  m_Text: Make Passenger Interact
 --- !u!222 &1120447194
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2981,7 +2981,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LEVEL TITLE
+  m_Text: ALL ABOARD
 --- !u!222 &1471281105
 CanvasRenderer:
   m_ObjectHideFlags: 0
